@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+
+.scannerwork
+coverage
+
+*.log
+**/*.local
+# For local pages and scripts
+**/*.local.tsx
+**/*.local.ts
+**/*.local.js
+
+**/node_modules/
+**/.next/
+**/.nest/
+./packages/node-graphql/dist/

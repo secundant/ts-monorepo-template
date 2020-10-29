@@ -1,0 +1,6 @@
+node_modules
+*.local.{js,ts,tsx}
+dist/**/*
+es6/**/*
+es2015/**/*
+esnext/**/*
