@@ -1,0 +1,64 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "targets": {
+            "chrome": 80
+          },
+          "useBuiltIns": "usage",
+          "corejs": 3
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "babel-plugin-date-fns",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "@material-ui/core",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "core"
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "@material-ui/icons",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "icons"
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "pure": true,
+            "minify": true,
+            "displayName": false
+          }
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "displayName": true
+          }
+        ]
+      ]
+    }
+  }
+}

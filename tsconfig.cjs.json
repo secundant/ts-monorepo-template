@@ -3,7 +3,6 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2018",
-    "jsx": "react",
-    "emitDecoratorMetadata": true
+    "jsx": "react"
   }
 }

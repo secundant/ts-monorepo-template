@@ -24,13 +24,9 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@app": ["packages/*"]
-    },
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
-    ]
+      "@app": ["packages/*"],
+      "@app/react-nextjs/*": ["packages/react-nextjs/*"]
+    }
   },
   "include": ["./packages/**/*.ts", "./packages/**/*.tsx"],
   "exclude": ["node_modules"]

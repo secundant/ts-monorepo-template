@@ -1,0 +1,32 @@
+{
+  "name": "@app/react-nextjs",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/styled-components": "^5.1.4",
+    "babel-plugin-date-fns": "^2.0.0",
+    "babel-plugin-import": "^1.13.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "react-is": "^17.0.1",
+    "typescript": "^4.0.5",
+    "typescript-styled-plugin": "^0.15.0",
+    "webpack": "^4.44.2",
+    "webpackbar": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}
