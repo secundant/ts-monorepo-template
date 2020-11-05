@@ -1,22 +1,14 @@
-import React, { useCallback, useState } from 'react';
-import { Button, Dialog, DialogTitle, Divider, Typography } from '@material-ui/core';
-import { ExampleLayout } from '@app/react-nextjs/components/ExampleLayout';
+import React from 'react';
+import { Typography } from '@material-ui/core';
+import { FullLayout } from '@app/react-nextjs/components/Layout/Full';
 
 export default function IndexPage() {
-  const [opened, setOpened] = useState(false);
-  const handleOpenModalClick = useCallback(() => setOpened(true), []);
-  const handleModalClose = useCallback(() => setOpened(false), []);
-
   return (
-    <ExampleLayout>
+    <FullLayout>
       <Typography variant="h2" gutterBottom>
-        Example page
+        Index page
       </Typography>
-      <Button onClick={handleOpenModalClick}>Open modal</Button>
-      <Dialog open={opened} onClose={handleModalClose}>
-        <DialogTitle>Some modal</DialogTitle>
-      </Dialog>
-      <Divider />
+
       <Typography paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo
@@ -40,6 +32,6 @@ export default function IndexPage() {
         Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas accumsan lacus
         vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
       </Typography>
-    </ExampleLayout>
+    </FullLayout>
   );
 }

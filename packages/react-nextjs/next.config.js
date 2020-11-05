@@ -1,8 +1,8 @@
-const WebpackBar = require('webpackbar');
-
 module.exports = {
-  webpack(config, { dev }) {
-    if (dev) {
+  webpack(config) {
+    if (+process.env.PROGRESS) {
+      const WebpackBar = require('webpackbar');
+
       config.plugins.push(
         new WebpackBar({
           fancy: true,

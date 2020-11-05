@@ -20,5 +20,6 @@
       "name": "typescript-styled-plugin"
     }
   ],
-  "files": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.theme.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
