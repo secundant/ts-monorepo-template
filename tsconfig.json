@@ -25,7 +25,9 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@app": ["packages/*"],
-      "@app/react-nextjs/*": ["packages/react-nextjs/*"]
+      "@app/react-nextjs/*": ["packages/react-nextjs/*"],
+      "@app/react-shared/*": ["packages/react-shared/*"],
+      "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"]
     }
   },
   "include": ["./packages/**/*.ts", "./packages/**/*.tsx"],

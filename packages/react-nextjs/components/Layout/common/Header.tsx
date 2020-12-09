@@ -1,37 +1,18 @@
-import React, { memo, ReactNode } from 'react';
-import { AppBar, IconButton, Toolbar } from '@material-ui/core';
-import styled from 'styled-components';
-import { Menu } from '@material-ui/icons';
+import React, { memo } from 'react';
+import { useLayoutNavigationState } from '@app/react-nextjs/components/Layout/hooks/useLayoutNavigationState';
+import { Header } from '@app/react-material-ui-kit/Layout/Header';
+import { Typography } from '@material-ui/core';
 
-export interface HeaderProps extends HeaderStyledProps {
-  onIndentToggle(): void;
-  children: ReactNode;
-}
+export const LayoutHeader = memo(() => {
+  const [, { toggle }] = useLayoutNavigationState();
 
-export interface HeaderStyledProps {
-  indentLeft?: boolean;
-}
+  return (
+    <Header onIndentToggle={toggle}>
+      <Typography variant="h6" noWrap>
+        Example title
+      </Typography>
+    </Header>
+  );
+});
 
-export const Header = memo(({ indentLeft, onIndentToggle, children }: HeaderProps) => (
-  <>
-    <StyledAppBar indentLeft={indentLeft} position="fixed">
-      <Toolbar>
-        <IconButton color="inherit" onClick={onIndentToggle} edge="start">
-          <Menu />
-        </IconButton>
-        {children}
-      </Toolbar>
-    </StyledAppBar>
-  </>
-));
-
-Header.displayName = 'Header';
-
-const StyledAppBar = styled(AppBar).withConfig<HeaderStyledProps>({
-  shouldForwardProp: prop => prop !== 'indentLeft'
-})`
-  ${({ theme }) => theme.mui.breakpoints.up('md')} {
-    transition: padding-left 250ms;
-    padding-left: ${({ indentLeft }) => (indentLeft ? 300 : 60)}px;
-  }
-`;
+LayoutHeader.displayName = 'LayoutHeader';

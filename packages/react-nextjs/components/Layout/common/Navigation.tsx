@@ -1,50 +1,25 @@
-import React, { memo, ReactNode } from 'react';
-import { Drawer, useMediaQuery } from '@material-ui/core';
-import styled, { css, useTheme } from 'styled-components';
+import React, { memo } from 'react';
+import { useLayoutNavigationState } from '@app/react-nextjs/components/Layout/hooks/useLayoutNavigationState';
+import { NavLinkItem } from '@app/react-nextjs/components/Layout/common/NavLinkItem';
+import { Navigation } from '@app/react-material-ui-kit/Layout/Navigation';
+import { DirectionsCar, Home, Search } from '@material-ui/icons';
 
-export interface NavigationProps {
-  children: ReactNode;
-  onClose?(): void;
-  open?: boolean;
-}
-
-export const Navigation = memo(({ open, onClose, children }: NavigationProps) => {
-  const theme = useTheme();
-  const screenIsSmall = useMediaQuery(theme.mui.breakpoints.down('sm'));
+export const LayoutNavigation = memo(() => {
+  const [{ open }, { close }] = useLayoutNavigationState();
 
   return (
-    <StyledDrawer open={open} onClose={onClose} variant={screenIsSmall ? 'temporary' : 'permanent'}>
-      {children}
-    </StyledDrawer>
+    <Navigation
+      open={open}
+      onClose={close}
+      items={
+        <>
+          <NavLinkItem label="Home" href="/" startIcon={<Home />} />
+          <NavLinkItem label="Other" href="/other" startIcon={<DirectionsCar />} />
+          <NavLinkItem label="Google" href="https://google.com" startIcon={<Search />} />
+        </>
+      }
+    />
   );
 });
 
-Navigation.displayName = 'Navigation';
-
-const StyledDrawer = styled(Drawer)`
-  ${({ theme }) => theme.mui.breakpoints.down('md')} {
-    &,
-    & > .MuiPaper-root {
-      transition: width 250ms;
-      width: 300px;
-    }
-  }
-
-  ${({ theme }) => theme.mui.breakpoints.up('md')} {
-    &,
-    & > .MuiPaper-root {
-      ${({ open }) => css`
-        transition: width 250ms;
-        width: ${open ? 300 : 60}px;
-      `}
-    }
-  }
-
-  white-space: nowrap;
-  flex-shrink: 0;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
+LayoutNavigation.displayName = 'LayoutNavigation';

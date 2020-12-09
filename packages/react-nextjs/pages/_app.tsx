@@ -3,6 +3,7 @@ import { ThemeProvider } from '@app/react-nextjs/styles/ThemeProvider';
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { NProgressPageLoading } from '@app/react-nextjs/components/NProgressPageLoading';
+import '@app/react-nextjs/public/disable-overscroll.css';
 
 export default class App extends NextApp {
   componentDidMount(): void {

@@ -5,7 +5,7 @@ import { NavOnlyLayout } from '@app/react-nextjs/components/Layout/NavOnly';
 export async function getServerSideProps(): Promise<{
   props: OtherPageProps;
 }> {
-  await new Promise(r => setTimeout(r, 1200));
+  await new Promise(r => setTimeout(r, 100));
   return {
     props: {
       value: Math.ceil(100 + Math.random() * 500)
