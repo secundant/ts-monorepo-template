@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  react-nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: release
+    image: react-nextjs
+    container_name: react-nextjs
+    environment:
+      PORT: 80
+    ports:
+      - 80:80
