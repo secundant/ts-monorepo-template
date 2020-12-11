@@ -12,7 +12,12 @@ export const Header = memo(({ onIndentToggle, children }: HeaderProps) => (
   <>
     <StyledAppBar position="sticky">
       <Toolbar>
-        <IconButton color="inherit" onClick={onIndentToggle} edge="start">
+        <IconButton
+          color="inherit"
+          onClick={onIndentToggle}
+          edge="start"
+          aria-label="Toggle navigation"
+        >
           <Menu />
         </IconButton>
         {children}

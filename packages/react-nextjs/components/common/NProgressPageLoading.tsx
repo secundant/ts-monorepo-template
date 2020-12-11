@@ -29,6 +29,7 @@ export const NProgressPageLoading = memo(() => {
       Router.events.on('routeChangeError', handleEnd);
 
       return () => {
+        handleEnd();
         Router.events.off('routeChangeStart', handleStart);
         Router.events.off('routeChangeComplete', handleEnd);
         Router.events.off('routeChangeError', handleEnd);

@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
-import { useLayoutNavigationState } from '@app/react-nextjs/components/Layout/hooks/useLayoutNavigationState';
 import { Header } from '@app/react-material-ui-kit/Layout/Header';
 import { Typography } from '@material-ui/core';
+import { useRequiredContext } from '@app/react-shared/hooks/useRequiredContext';
+import { LayoutNavigationContext } from '@app/react-nextjs/contexts/Layout/Navigation';
 
 export const LayoutHeader = memo(() => {
-  const [, { toggle }] = useLayoutNavigationState();
+  const { toggle } = useRequiredContext(LayoutNavigationContext);
 
   return (
     <Header onIndentToggle={toggle}>

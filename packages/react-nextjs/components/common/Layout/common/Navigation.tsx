@@ -1,15 +1,16 @@
 import React, { memo } from 'react';
-import { useLayoutNavigationState } from '@app/react-nextjs/components/Layout/hooks/useLayoutNavigationState';
-import { NavLinkItem } from '@app/react-nextjs/components/Layout/common/NavLinkItem';
+import { NavLinkItem } from '@app/react-nextjs/components/common/Layout/common/NavLinkItem';
 import { Navigation } from '@app/react-material-ui-kit/Layout/Navigation';
 import { DirectionsCar, Home, Search } from '@material-ui/icons';
+import { useRequiredContext } from '@app/react-shared/hooks/useRequiredContext';
+import { LayoutNavigationContext } from '@app/react-nextjs/contexts/Layout/Navigation';
 
 export const LayoutNavigation = memo(() => {
-  const [{ open }, { close }] = useLayoutNavigationState();
+  const { isOpen, close } = useRequiredContext(LayoutNavigationContext);
 
   return (
     <Navigation
-      open={open}
+      open={isOpen}
       onClose={close}
       items={
         <>
