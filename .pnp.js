@@ -281,17 +281,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'virtual:f60fec7f998665bc3f860e8d4b28c6ed98cc881d52fc3d01c01e2bdec24c142802b40032b202e508ae35d0b5637fe92116524604bbb2ac0301823e73eb1b57bf#npm:4.11.2'
                   ],
                   ['@next/bundle-analyzer', 'npm:10.0.3'],
+                  ['@types/css-mediaquery', 'npm:0.1.0'],
                   ['@types/node', 'npm:14.14.11'],
                   ['@types/nprogress', 'npm:0.2.0'],
+                  [
+                    '@types/ramda',
+                    'https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90'
+                  ],
                   ['@types/react', 'npm:17.0.0'],
                   ['@types/react-dom', 'npm:17.0.0'],
                   ['@types/styled-components', 'npm:5.1.4'],
+                  ['@types/ua-parser-js', 'npm:0.7.35'],
                   ['axios', 'npm:0.21.0'],
+                  ['css-mediaquery', 'npm:0.1.2'],
                   [
                     'next',
                     'virtual:cd88af007cfc0ca5459aac6c030b9c5da708d979315c71a4f6f87f8ef38f2d80a68dd48527eb63650c49118ef3710aa03b3de3744df606d5d89fbfb57d018ab4#npm:10.0.3'
                   ],
                   ['nprogress', 'npm:0.2.0'],
+                  ['ramda', 'npm:0.27.1'],
                   ['react', 'npm:17.0.1'],
                   [
                     'react-dom',
@@ -307,6 +315,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=5bf698'
                   ],
                   ['typescript-styled-plugin', 'npm:0.15.0'],
+                  ['ua-parser-js', 'npm:0.7.23'],
                   [
                     'webpack',
                     'virtual:cd88af007cfc0ca5459aac6c030b9c5da708d979315c71a4f6f87f8ef38f2d80a68dd48527eb63650c49118ef3710aa03b3de3744df606d5d89fbfb57d018ab4#npm:5.10.0'
@@ -2384,6 +2393,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ]
         ],
         [
+          '@types/css-mediaquery',
+          [
+            [
+              'npm:0.1.0',
+              {
+                packageLocation:
+                  './.yarn/cache/@types-css-mediaquery-npm-0.1.0-c53297c5c2-693700e7b0.zip/node_modules/@types/css-mediaquery/',
+                packageDependencies: [['@types/css-mediaquery', 'npm:0.1.0']],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
           '@types/eslint',
           [
             [
@@ -2656,6 +2679,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ]
         ],
         [
+          '@types/ramda',
+          [
+            [
+              'https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90',
+              {
+                packageLocation:
+                  './.yarn/cache/@types-ramda-https-846153a68c-be5fe5a913.zip/node_modules/@types/ramda/',
+                packageDependencies: [
+                  [
+                    '@types/ramda',
+                    'https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90'
+                  ]
+                ],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
           '@types/react',
           [
             [
@@ -2766,6 +2808,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@types/react-native', 'npm:0.63.30'],
                   ['csstype', 'npm:3.0.4']
                 ],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
+          '@types/ua-parser-js',
+          [
+            [
+              'npm:0.7.35',
+              {
+                packageLocation:
+                  './.yarn/cache/@types-ua-parser-js-npm-0.7.35-10d994b61c-688dbdc6cf.zip/node_modules/@types/ua-parser-js/',
+                packageDependencies: [['@types/ua-parser-js', 'npm:0.7.35']],
                 linkType: 'HARD'
               }
             ]
@@ -6326,6 +6382,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ]
                 ],
                 packagePeers: ['@types/webpack', 'webpack'],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
+          'css-mediaquery',
+          [
+            [
+              'npm:0.1.2',
+              {
+                packageLocation:
+                  './.yarn/cache/css-mediaquery-npm-0.1.2-39b61fbcad-571ab2efdb.zip/node_modules/css-mediaquery/',
+                packageDependencies: [['css-mediaquery', 'npm:0.1.2']],
                 linkType: 'HARD'
               }
             ]
@@ -15355,6 +15425,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ]
         ],
         [
+          'ramda',
+          [
+            [
+              'npm:0.27.1',
+              {
+                packageLocation:
+                  './.yarn/cache/ramda-npm-0.27.1-5818f2cb83-9aa4655dff.zip/node_modules/ramda/',
+                packageDependencies: [['ramda', 'npm:0.27.1']],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
           'randombytes',
           [
             [
@@ -18838,6 +18922,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                 packageDependencies: [
                   ['typescript-template-language-service-decorator', 'npm:2.2.0']
                 ],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
+          'ua-parser-js',
+          [
+            [
+              'npm:0.7.23',
+              {
+                packageLocation:
+                  './.yarn/cache/ua-parser-js-npm-0.7.23-b65ab49624-ce6ce4f53f.zip/node_modules/ua-parser-js/',
+                packageDependencies: [['ua-parser-js', 'npm:0.7.23']],
                 linkType: 'HARD'
               }
             ]

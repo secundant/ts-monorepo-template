@@ -98,20 +98,26 @@ __metadata:
     "@material-ui/core": ^4.11.2
     "@material-ui/icons": ^4.11.2
     "@next/bundle-analyzer": ^10.0.3
+    "@types/css-mediaquery": ^0.1.0
     "@types/node": ^14.14.11
     "@types/nprogress": ^0.2.0
+    "@types/ramda": "types/npm-ramda#dist"
     "@types/react": ^17.0.0
     "@types/react-dom": ^17.0.0
     "@types/styled-components": ^5.1.4
+    "@types/ua-parser-js": ^0.7.35
     axios: ^0.21.0
+    css-mediaquery: ^0.1.2
     next: ^10.0.3
     nprogress: ^0.2.0
+    ramda: ^0.27.1
     react: ^17.0.1
     react-dom: ^17.0.1
     react-is: ^17.0.1
     styled-components: ^5.2.1
     typescript: ^4.1.2
     typescript-styled-plugin: ^0.15.0
+    ua-parser-js: ^0.7.23
     webpack: ^5.10.0
   languageName: unknown
   linkType: soft
@@ -1252,6 +1258,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/css-mediaquery@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@types/css-mediaquery@npm:0.1.0"
+  checksum: 693700e7b0db46491ead8d569c061998982fd87bc2f2383f85bbb67089e6314f1e78a025f0a4fff4f9baa54bc684f6877e7496b4cfa0274e4d8c1384437df441
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.0":
   version: 3.7.0
   resolution: "@types/eslint-scope@npm:3.7.0"
@@ -1406,6 +1419,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ramda@types/npm-ramda#dist":
+  version: 0.25.0
+  resolution: "@types/ramda@https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90"
+  checksum: be5fe5a913cdfe972e2c08a086501971281cbc4ab5d046f5f4032bafa44ad9e1ec69d5d8f1e2da68a52b850c0eeda03a7664a2f6e2bb5ed8ef25a321e78846ca
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^17.0.0":
   version: 17.0.0
   resolution: "@types/react-dom@npm:17.0.0"
@@ -1469,6 +1489,13 @@ __metadata:
     "@types/react-native": "*"
     csstype: ^3.0.2
   checksum: 0f458fa8989ccf921200f590680580ab1d69dc198a6db27765974d0d707713ef38f6b2d1facbd8f9a411373cc2200f74def6d2f5b46dd037bc7687654152b2b0
+  languageName: node
+  linkType: hard
+
+"@types/ua-parser-js@npm:^0.7.35":
+  version: 0.7.35
+  resolution: "@types/ua-parser-js@npm:0.7.35"
+  checksum: 688dbdc6cfe746bd2e2a366497d0d4e1b0ff5959a6e3507d7eb65fe7c5d45dcc2a22682be7616419e2b933b08f4b7ae1a1889b8afa050434b70ca0852d9ea426
   languageName: node
   linkType: hard
 
@@ -3435,6 +3462,13 @@ __metadata:
   peerDependencies:
     webpack: ^4.27.0 || ^5.0.0
   checksum: 1f441ac567e3c45dde1009860fcc0d2807d5af4e42e799c77070a121f91a8a8c0ce41d6aa19b664bd9fbc127c5375abefa8f871ba503e55f2ea27c3e1385f3fa
+  languageName: node
+  linkType: hard
+
+"css-mediaquery@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "css-mediaquery@npm:0.1.2"
+  checksum: 571ab2efdba0dead1315eb82b1e53917b4aeb45f07cc2ff97bfe3c6443cd036843d944044661561b5585d1f64ecbcad112052b40846ae4d85ef7d5e978e996e4
   languageName: node
   linkType: hard
 
@@ -8703,6 +8737,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"ramda@npm:^0.27.1":
+  version: 0.27.1
+  resolution: "ramda@npm:0.27.1"
+  checksum: 9aa4655dffdca66f8ba2ceabebe51996d6c75f6a2fb901a150885ace22c5950c211dd589868780b7a91c1443771702634d4370e7572d8c63c60e4b4f61aa57a9
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.0.0, randombytes@npm:^2.0.1, randombytes@npm:^2.0.5, randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -10715,6 +10756,13 @@ typescript@^4.1.2:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: acfc7be6a091806432f324ad258c4a7d2a63996106a4c001db1eebb2661608a9fd0d109d0d29249c3e6890e3547a97b8580cbe0833aa64b2fb83f66e4d88a466
+  languageName: node
+  linkType: hard
+
+"ua-parser-js@npm:^0.7.23":
+  version: 0.7.23
+  resolution: "ua-parser-js@npm:0.7.23"
+  checksum: ce6ce4f53f2905519eb427b12ab441c2f72dd162073a925b4e052b6ebbc0f2325554ac44175d58a125e1919888e1226364603e7ea2d797e8210238a20f81802d
   languageName: node
   linkType: hard
 

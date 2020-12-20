@@ -3,23 +3,23 @@ import { Typography } from '@material-ui/core';
 import { NavOnlyLayout } from '@app/react-nextjs/components/common/Layout/NavOnly';
 import { LayoutNavigationProvider } from '@app/react-nextjs/contexts/Layout/Navigation';
 import { PageHead } from '@app/react-nextjs/components/common/Page/Head';
-
-export async function getServerSideProps(): Promise<{
-  props: OtherPageProps;
-}> {
-  await new Promise(r => setTimeout(r, 100));
-  return {
-    props: {
-      value: Math.ceil(100 + Math.random() * 500)
-    }
-  };
-}
+import {
+  withDefaultPage,
+  withDefaultServerProps
+} from '@app/react-nextjs/page-modules/presets/default';
 
 interface OtherPageProps {
   value: number;
 }
 
-export default function OtherPage({ value }: OtherPageProps) {
+export const getServerSideProps = withDefaultServerProps<OtherPageProps>(async () => {
+  await new Promise(r => setTimeout(r, 100));
+  return {
+    value: Math.ceil(100 + Math.random() * 500)
+  };
+});
+
+export default withDefaultPage()(function OtherPage({ value }: OtherPageProps) {
   return (
     <LayoutNavigationProvider>
       <NavOnlyLayout>
@@ -42,4 +42,4 @@ export default function OtherPage({ value }: OtherPageProps) {
       </NavOnlyLayout>
     </LayoutNavigationProvider>
   );
-}
+});

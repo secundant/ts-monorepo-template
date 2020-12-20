@@ -3,8 +3,14 @@ import { Typography } from '@material-ui/core';
 import { FullLayout } from '@app/react-nextjs/components/common/Layout/Full';
 import { LayoutNavigationProvider } from '@app/react-nextjs/contexts/Layout/Navigation';
 import { PageHead } from '@app/react-nextjs/components/common/Page/Head';
+import {
+  withDefaultPage,
+  withDefaultServerProps
+} from '@app/react-nextjs/page-modules/presets/default';
 
-export default function IndexPage() {
+export const getServerSideProps = withDefaultServerProps();
+
+export default withDefaultPage()(function IndexPage() {
   return (
     <LayoutNavigationProvider>
       <FullLayout>
@@ -40,4 +46,4 @@ export default function IndexPage() {
       </FullLayout>
     </LayoutNavigationProvider>
   );
-}
+});

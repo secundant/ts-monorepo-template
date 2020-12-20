@@ -10,7 +10,9 @@ export interface NavigationProps {
 
 export const Navigation = memo(({ open, onClose, items }: NavigationProps) => {
   const theme = useTheme();
-  const screenIsSmall = useMediaQuery(theme.mui.breakpoints.down('sm'));
+  const screenIsSmall = useMediaQuery(theme.mui.breakpoints.down('sm'), {
+    noSsr: true
+  });
 
   return (
     <StyledDrawer open={open} onClose={onClose} variant={screenIsSmall ? 'temporary' : 'permanent'}>

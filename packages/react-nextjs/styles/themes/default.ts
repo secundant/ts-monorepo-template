@@ -1,5 +1,3 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { ITheme, IThemeCreatorOptions } from '@app/react-nextjs/styles/ITheme';
 
-export default {
-  mui: createMuiTheme({})
-};
+export default ({ createMui }: IThemeCreatorOptions): ITheme => ({ mui: createMui({}) });

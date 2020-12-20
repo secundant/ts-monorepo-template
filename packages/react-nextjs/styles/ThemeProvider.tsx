@@ -1,12 +1,43 @@
-import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import React, { PropsWithChildren, ReactElement } from 'react';
+import {
+  createMuiTheme,
+  StylesProvider,
+  ThemeProvider as MuiThemeProvider
+} from '@material-ui/core/styles';
+import React, { ReactElement, ReactNode, useMemo } from 'react';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
-import defaultTheme from '@app/react-nextjs/styles/themes/default';
+import * as process from 'process';
+import { makeCreateSsrMuiTheme } from '@app/react-nextjs/styles/utils/createSsrMuiTheme';
+import createDefaultTheme from '@app/react-nextjs/styles/themes/default';
 
-export function ThemeProvider({ children }: PropsWithChildren<{}>): ReactElement {
+export interface ThemeProviderProps extends ThemeProviderServerProps {
+  children: ReactNode;
+}
+
+export interface ThemeProviderServerProps {
+  themeOptions: {
+    deviceType: ThemeDeviceType;
+  };
+}
+
+export type ThemeDeviceType = 'mobile' | 'tablet' | 'desktop';
+
+export function ThemeProvider({ children, themeOptions }: ThemeProviderProps): ReactElement {
+  const createMuiThemeAdapter = useMemo(
+    () => (process.browser ? createMuiTheme : makeCreateSsrMuiTheme(themeOptions.deviceType)),
+    [themeOptions.deviceType]
+  );
+
+  const theme = useMemo(
+    () =>
+      createDefaultTheme({
+        createMui: createMuiThemeAdapter
+      }),
+    [createMuiThemeAdapter]
+  );
+
   return (
-    <MuiThemeProvider theme={defaultTheme.mui}>
-      <SCThemeProvider theme={defaultTheme}>
+    <MuiThemeProvider theme={theme.mui}>
+      <SCThemeProvider theme={theme}>
         <StylesProvider injectFirst>{children}</StylesProvider>
       </SCThemeProvider>
     </MuiThemeProvider>
