@@ -14,7 +14,7 @@ export function withThemeServerProps(): IServerPropsMiddleware<ThemeProviderServ
 
     return {
       themeOptions: {
-        deviceType: toSupportedDeviceType(type)
+        deviceType: toSupportedDeviceType(type ?? '')
       }
     };
   };

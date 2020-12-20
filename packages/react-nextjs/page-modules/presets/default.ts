@@ -8,7 +8,7 @@ export function withDefaultServerProps<
   Params extends {} = {},
   Query extends {} = {}
 >(middleware?: IServerPropsMiddleware<Props, Params, Query>) {
-  return ServerPropsContext.middlewaresToNextFn(withThemeServerProps(), middleware);
+  return ServerPropsContext.middlewaresToNextFn(withThemeServerProps(), middleware!);
 }
 
 export function withDefaultPage() {

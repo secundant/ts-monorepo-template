@@ -3,7 +3,7 @@ import { IServerPropsContext } from '@app/react-nextjs/services/ServerPropsConte
 
 export async function applyServerPropsMiddleware<Params extends {}, Query extends {}>(
   context: IServerPropsContext<Params, Query>,
-  ...middlewares: Array<IServerPropsMiddleware<unknown, Params, Query>>
+  ...middlewares: Array<IServerPropsMiddleware<any, Params, Query>>
 ): Promise<unknown> {
   const props = {};
 

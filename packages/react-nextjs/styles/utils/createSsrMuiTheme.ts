@@ -12,7 +12,7 @@ export const makeCreateSsrMuiTheme = (deviceType: ThemeDeviceType): MuiThemeCrea
     {
       ...options,
       props: {
-        ...options.props,
+        ...options?.props,
         MuiUseMediaQuery: {
           ssrMatchMedia: query => ({
             matches: match(query, {

@@ -7,8 +7,8 @@ import { combineServerPropsMiddlewares } from '@app/react-nextjs/page-modules/co
 export class ServerPropsContext<Params extends {}, Query extends {}>
   implements IServerPropsContext<Params, Query> {
   static middlewaresToNextFn<Params extends {}, Query extends {}>(
-    ...middlewares: Array<IServerPropsMiddleware<unknown, Params, Query>>
-  ): GetServerSideProps<unknown, Params> {
+    ...middlewares: Array<IServerPropsMiddleware<any, Params, Query>>
+  ): GetServerSideProps<any, Params> {
     const middleware = combineServerPropsMiddlewares(...middlewares);
 
     return async nextContext => {
@@ -26,7 +26,7 @@ export class ServerPropsContext<Params extends {}, Query extends {}>
   private result: GetServerSidePropsResult<unknown> | null = null;
 
   constructor({ params, query, req }: GetServerSidePropsContext<Params>) {
-    this.params = params;
+    this.params = params!;
     this.query = query as Query; // TODO Add runtypes support
     this.request = req;
   }
