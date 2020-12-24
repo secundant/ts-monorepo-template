@@ -30,6 +30,10 @@
       "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"]
     }
   },
-  "include": ["./packages/**/*.ts", "./packages/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./packages/**/*.ts",
+    "./packages/**/*.tsx",
+    "./.storybook/**/*.ts",
+    "./.storybook/**/*.tsx"
+  ]
 }
