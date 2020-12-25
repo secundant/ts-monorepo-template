@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "esnext"],
+    "types": ["next", "node"],
+    "jsx": "react"
+  },
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin"
+    }
+  ],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
