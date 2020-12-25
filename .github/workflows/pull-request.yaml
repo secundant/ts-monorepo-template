@@ -2,23 +2,23 @@ name: pull-request
 on: pull_request
 jobs:
   lint:
-    name: lint
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: yarn lint
   ts-check:
-    name: Validate TS
+    name: Check TS
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: yarn ts:check
   test:
-    name: Test
+    name: Run test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: yarn test
+      - run: yarn test --passWithNoTests
