@@ -98,6 +98,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ],
                   ['husky', 'npm:4.3.6'],
                   ['jest', 'npm:26.6.3'],
+                  ['jest-circus', 'npm:26.6.3'],
                   ['lint-staged', 'npm:10.5.3'],
                   [
                     'next',
@@ -22325,6 +22326,43 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ]
         ],
         [
+          'jest-circus',
+          [
+            [
+              'npm:26.6.3',
+              {
+                packageLocation:
+                  './.yarn/cache/jest-circus-npm-26.6.3-b5c16d78c9-8ef70b1ccd.zip/node_modules/jest-circus/',
+                packageDependencies: [
+                  ['jest-circus', 'npm:26.6.3'],
+                  ['@babel/traverse', 'npm:7.12.1'],
+                  ['@jest/environment', 'npm:26.6.2'],
+                  ['@jest/test-result', 'npm:26.6.2'],
+                  ['@jest/types', 'npm:26.6.2'],
+                  ['@types/babel__traverse', 'npm:7.0.15'],
+                  ['@types/node', 'npm:14.14.6'],
+                  ['chalk', 'npm:4.1.0'],
+                  ['co', 'npm:4.6.0'],
+                  ['dedent', 'npm:0.7.0'],
+                  ['expect', 'npm:26.6.2'],
+                  ['is-generator-fn', 'npm:2.1.0'],
+                  ['jest-each', 'npm:26.6.2'],
+                  ['jest-matcher-utils', 'npm:26.6.2'],
+                  ['jest-message-util', 'npm:26.6.2'],
+                  ['jest-runner', 'npm:26.6.3'],
+                  ['jest-runtime', 'npm:26.6.3'],
+                  ['jest-snapshot', 'npm:26.6.2'],
+                  ['jest-util', 'npm:26.6.2'],
+                  ['pretty-format', 'npm:26.6.2'],
+                  ['stack-utils', 'npm:2.0.2'],
+                  ['throat', 'npm:5.0.0']
+                ],
+                linkType: 'HARD'
+              }
+            ]
+          ]
+        ],
+        [
           'jest-cli',
           [
             [
@@ -25026,6 +25064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ],
                   ['husky', 'npm:4.3.6'],
                   ['jest', 'npm:26.6.3'],
+                  ['jest-circus', 'npm:26.6.3'],
                   ['lint-staged', 'npm:10.5.3'],
                   [
                     'next',
