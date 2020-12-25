@@ -27,6 +27,10 @@ const StyledDrawer = styled(Drawer)`
   grid-area: navigation;
   flex-shrink: 0;
 
+  & > .MuiPaper-root {
+    position: static;
+  }
+
   &,
   & > .MuiPaper-root {
     transition: width 250ms;

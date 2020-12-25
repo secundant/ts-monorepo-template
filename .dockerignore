@@ -1,1 +1,2 @@
-.next/
+packages/react-nextjs/.next/
+node_modules/

@@ -5,3 +5,4 @@ es6/**/*
 es2015/**/*
 esnext/**/*
 .eslintcache
+.pnp.js

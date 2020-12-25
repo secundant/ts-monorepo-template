@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import React from 'react';
 import { ThemeProvider } from '@app/react-nextjs/styles/ThemeProvider';
+import { CssBaseline } from '@material-ui/core';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -14,6 +15,7 @@ export const decorators = [
         deviceType: 'desktop'
       }}
     >
+      <CssBaseline />
       <StorybookGlobalStyles />
       <Story />
     </ThemeProvider>
