@@ -1,6 +1,5 @@
 import NextApp from 'next/app';
 import React from 'react';
-import { CssBaseline } from '@material-ui/core';
 import { NProgressPageLoading } from '@app/react-nextjs/components/common/NProgressPageLoading';
 import '@app/react-nextjs/public/fix-root-size.css';
 import '@app/react-nextjs/public/disable-overscroll.css';
@@ -16,7 +15,6 @@ export default class App extends NextApp {
   render() {
     return (
       <>
-        <CssBaseline />
         <NProgressPageLoading />
         {super.render()}
       </>

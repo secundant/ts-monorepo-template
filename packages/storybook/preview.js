@@ -1,29 +1,29 @@
-import { createGlobalStyle } from 'styled-components';
 import React from 'react';
 import { ThemeProvider } from '@app/react-nextjs/styles/ThemeProvider';
-import { CssBaseline } from '@material-ui/core';
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  layout: 'padded'
+  actions: { argTypesRegex: '^on[A-Z].*' }
 };
 
 export const decorators = [
-  Story => (
+  (Story, ctx) => (
     <ThemeProvider
       themeOptions={{
         deviceType: 'desktop'
       }}
     >
-      <CssBaseline />
-      <StorybookGlobalStyles />
-      <Story />
+      <Story {...ctx} />
     </ThemeProvider>
   )
 ];
 
-const StorybookGlobalStyles = createGlobalStyle`
-  body {
-    box-sizing: border-box;
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Theme from main app',
+    defaultValue: 'default',
+    toolbar: {
+      items: ['default']
+    }
   }
-`;
+};

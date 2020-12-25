@@ -8,6 +8,7 @@ import { ThemeProvider as SCThemeProvider } from 'styled-components';
 import * as process from 'process';
 import { makeCreateSsrMuiTheme } from '@app/react-nextjs/styles/utils/createSsrMuiTheme';
 import createDefaultTheme from '@app/react-nextjs/styles/themes/default';
+import { CssBaseline } from '@material-ui/core';
 
 export interface ThemeProviderProps extends ThemeProviderServerProps {
   children: ReactNode;
@@ -37,6 +38,7 @@ export function ThemeProvider({ children, themeOptions }: ThemeProviderProps): R
 
   return (
     <MuiThemeProvider theme={theme.mui}>
+      <CssBaseline />
       <SCThemeProvider theme={theme}>
         <StylesProvider injectFirst>{children}</StylesProvider>
       </SCThemeProvider>

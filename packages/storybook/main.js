@@ -6,7 +6,8 @@ module.exports = {
     checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true
     }
   },
   babel: {

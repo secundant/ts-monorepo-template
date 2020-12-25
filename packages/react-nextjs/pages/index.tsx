@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import { FullLayout } from '@app/react-nextjs/components/common/Layout/Full';
 import { LayoutNavigationProvider } from '@app/react-nextjs/contexts/Layout/Navigation';
 import { PageHead } from '@app/react-nextjs/components/common/Page/Head';
@@ -7,6 +6,7 @@ import {
   withDefaultPage,
   withDefaultServerProps
 } from '@app/react-nextjs/page-modules/presets/default';
+import { Text } from '@app/react-material-ui-kit/Typography';
 
 export const getServerSideProps = withDefaultServerProps();
 
@@ -16,11 +16,11 @@ export default withDefaultPage()(function IndexPage() {
       <FullLayout>
         <PageHead title="Main page" description="Static page with full layout" />
 
-        <Typography variant="h2" gutterBottom>
+        <Text type="h2" gutterBottom>
           Index page
-        </Typography>
+        </Text>
 
-        <Typography paragraph>
+        <Text gutterBottom>
           Lorem ipsum dolor sit amets, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
           facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
@@ -31,8 +31,8 @@ export default withDefaultPage()(function IndexPage() {
           imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
           arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
           donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
+        </Text>
+        <Text gutterBottom>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
           facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
           tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
@@ -42,7 +42,7 @@ export default withDefaultPage()(function IndexPage() {
           tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
           nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
           accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        </Text>
       </FullLayout>
     </LayoutNavigationProvider>
   );

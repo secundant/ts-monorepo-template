@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import { NavOnlyLayout } from '@app/react-nextjs/components/common/Layout/NavOnly';
 import { LayoutNavigationProvider } from '@app/react-nextjs/contexts/Layout/Navigation';
 import { PageHead } from '@app/react-nextjs/components/common/Page/Head';
@@ -7,6 +6,7 @@ import {
   withDefaultPage,
   withDefaultServerProps
 } from '@app/react-nextjs/page-modules/presets/default';
+import { Text } from '@app/react-material-ui-kit/Typography';
 
 interface OtherPageProps {
   value: number;
@@ -24,11 +24,11 @@ export default withDefaultPage()(function OtherPage({ value }: OtherPageProps) {
     <LayoutNavigationProvider>
       <NavOnlyLayout>
         <PageHead title="Other page" description="Page with getServerSideProps" />
-        <Typography variant="h2" gutterBottom>
+        <Text type="h2" gutterBottom>
           Other page (ssr value: {value})
-        </Typography>
+        </Text>
 
-        <Typography paragraph>
+        <Text gutterBottom>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
           facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
           tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
@@ -38,7 +38,7 @@ export default withDefaultPage()(function OtherPage({ value }: OtherPageProps) {
           tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
           nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
           accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        </Text>
       </NavOnlyLayout>
     </LayoutNavigationProvider>
   );

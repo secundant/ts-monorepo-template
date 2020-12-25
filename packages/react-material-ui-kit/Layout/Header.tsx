@@ -12,14 +12,14 @@ export const Header = memo(({ onIndentToggle, children }: HeaderProps) => (
   <>
     <StyledAppBar position="sticky">
       <Toolbar>
-        <IconButton
+        <StyledMenuIconButton
           color="inherit"
           onClick={onIndentToggle}
           edge="start"
           aria-label="Toggle navigation"
         >
           <Menu />
-        </IconButton>
+        </StyledMenuIconButton>
         {children}
       </Toolbar>
     </StyledAppBar>
@@ -30,4 +30,8 @@ Header.displayName = 'Header';
 
 const StyledAppBar = styled(AppBar)`
   grid-area: header;
+`;
+
+const StyledMenuIconButton = styled(IconButton)`
+  margin-right: 8px;
 `;

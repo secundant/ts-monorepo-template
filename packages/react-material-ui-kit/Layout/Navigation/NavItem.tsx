@@ -5,9 +5,9 @@ import {
   ListItemSecondaryAction,
   ListItemText
 } from '@material-ui/core';
-import React, { HTMLAttributes, memo, ReactElement, ReactNode } from 'react';
+import React, { memo, ReactElement, ReactNode } from 'react';
 
-export interface NavItemProps extends HTMLAttributes<HTMLDivElement> {
+export interface NavItemProps {
   startAvatar?: ReactElement;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
