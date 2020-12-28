@@ -1,11 +1,9 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import { Header } from '@app/react-material-ui-kit/Layout/Header';
-import { Navigation } from '@app/react-material-ui-kit/Layout/Navigation';
-import { NavItem } from '@app/react-material-ui-kit/Layout/Navigation/NavItem';
-import { Home } from '@material-ui/icons';
 import { LayoutRoot, PageBody } from '@app/react-material-ui-kit/Layout/styled';
 import { Text } from '@app/react-material-ui-kit/Typography';
+import { NavigationStory } from './NavigationStory';
 
 export default {
   title: 'UIKit/Layout',
@@ -21,7 +19,7 @@ export const Layout: Story<{}> = () => (
       <Text type="h5">Layout title</Text>
     </Header>
 
-    <Navigation open items={<NavItem startIcon={<Home />} label="Home" />} />
+    <NavigationStory />
 
     <PageBody>
       <Text type="h1" gutterBottom>

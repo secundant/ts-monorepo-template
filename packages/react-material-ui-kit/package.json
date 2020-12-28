@@ -2,8 +2,10 @@
   "private": true,
   "name": "@app/react-material-ui-kit",
   "dependencies": {
+    "@app/react-shared": "workspace:*",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "material-ui-popup-state": "^1.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",

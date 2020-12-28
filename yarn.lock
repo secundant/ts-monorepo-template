@@ -75,6 +75,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/react-material-ui-kit@workspace:packages/react-material-ui-kit"
   dependencies:
+    "@app/react-shared": "workspace:*"
     "@material-ui/core": ^4.11.2
     "@material-ui/icons": ^4.11.2
     "@types/node": ^14.14.16
@@ -82,6 +83,7 @@ __metadata:
     "@types/react-dom": ^17.0.0
     "@types/styled-components": ^5.1.7
     core-js: ^3.8.1
+    material-ui-popup-state: ^1.7.1
     react: ^17.0.1
     react-dom: ^17.0.1
     react-is: ^17.0.1
@@ -124,7 +126,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/react-shared@workspace:packages/react-shared":
+"@app/react-shared@workspace:*, @app/react-shared@workspace:packages/react-shared":
   version: 0.0.0-use.local
   resolution: "@app/react-shared@workspace:packages/react-shared"
   dependencies:
@@ -1657,7 +1659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.12.5, @babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:7.12.5, @babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.5, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.12.5
   resolution: "@babel/runtime@npm:7.12.5"
   dependencies:
@@ -2335,6 +2337,15 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 27c43902134d26e1f0bc29f5e4b9303ac88f143f7004dde93d85a4432181c7458e9c2ce30fa7e18260a2ce899576d57fc302a01be4d9731a37155ea4a7375d11
+  languageName: node
+  linkType: hard
+
+"@material-ui/types@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@material-ui/types@npm:4.1.1"
+  dependencies:
+    "@types/react": "*"
+  checksum: b5ee63a8967e2209a24ce3ddde103e54e6dd75b0ffbd35307ac90a32807bc322b50ff781c3add447b547f8a0ae90c06e9c87da8278e5cd31f6a2b6f0a06f46b0
   languageName: node
   linkType: hard
 
@@ -6315,7 +6326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:2.2.6, classnames@npm:^2.2.5":
+"classnames@npm:2.2.6, classnames@npm:^2.2.5, classnames@npm:^2.2.6":
   version: 2.2.6
   resolution: "classnames@npm:2.2.6"
   checksum: 490eaeca5931846737ffd33e472a701d268d5b8bc5717dd4cf108a127b06e86e05350e06799abbbe763a0e4c945b4217f6700b7ae00ddc703505682c370e5cf2
@@ -12014,6 +12025,20 @@ fsevents@^1.2.7:
   version: 1.2.6
   resolution: "material-colors@npm:1.2.6"
   checksum: 15883150a32abdb79638175b320712621a2962200ca3c09dfa0d5e3b614c081a0d459058ae367714f133801b8d9779f4137ddda4f2fbcaf8038a4624ab32c037
+  languageName: node
+  linkType: hard
+
+"material-ui-popup-state@npm:^1.7.1":
+  version: 1.7.1
+  resolution: "material-ui-popup-state@npm:1.7.1"
+  dependencies:
+    "@babel/runtime": ^7.1.5
+    "@material-ui/types": ^4.1.1
+    classnames: ^2.2.6
+    prop-types: ^15.0.0
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0
+  checksum: 6a4eef38daf8d140c201647f5908d466d98f777476f12187fd00ed56c0082cf5ee7912b35e1004e2e06cb73413763c3aee45bc2de64a0186ee35401a2995afee
   languageName: node
   linkType: hard
 

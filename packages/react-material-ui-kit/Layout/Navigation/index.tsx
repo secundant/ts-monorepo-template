@@ -1,6 +1,10 @@
-import React, { memo, ReactNode } from 'react';
+import React, { memo, ReactNode, useMemo } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Drawer, useMediaQuery } from '@material-ui/core';
+import { Drawer, List, useMediaQuery } from '@material-ui/core';
+import {
+  INestedNavigationItemsContext,
+  NestedNavigationItemsContext
+} from '@app/react-material-ui-kit/Layout/Navigation/Item/NestedContext';
 
 export interface NavigationProps {
   open: boolean;
@@ -10,13 +14,30 @@ export interface NavigationProps {
 
 export const Navigation = memo(({ open, onClose, items }: NavigationProps) => {
   const theme = useTheme();
-  const screenIsSmall = useMediaQuery(theme.mui.breakpoints.down('sm'), {
+  const screenIsSmallDown = useMediaQuery(theme.mui.breakpoints.down('sm'), {
+    noSsr: true
+  });
+  const screenIsMedium = useMediaQuery(theme.mui.breakpoints.between('md', 'md'), {
     noSsr: true
   });
 
+  const contextValue = useMemo<INestedNavigationItemsContext>(
+    () => ({
+      nestedStrategy: screenIsMedium || !open ? 'menu' : 'collapse',
+      depth: 0
+    }),
+    [screenIsMedium, open]
+  );
+
   return (
-    <StyledDrawer open={open} onClose={onClose} variant={screenIsSmall ? 'temporary' : 'permanent'}>
-      {items}
+    <StyledDrawer
+      open={open && !screenIsMedium}
+      onClose={onClose}
+      variant={screenIsSmallDown ? 'temporary' : 'permanent'}
+    >
+      <NestedNavigationItemsContext.Provider value={contextValue}>
+        <List>{items}</List>
+      </NestedNavigationItemsContext.Provider>
     </StyledDrawer>
   );
 });

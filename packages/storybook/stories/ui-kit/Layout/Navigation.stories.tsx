@@ -4,8 +4,8 @@ import {
   Navigation as NavigationComponent,
   NavigationProps
 } from '@app/react-material-ui-kit/Layout/Navigation';
-import { NavItem } from '@app/react-material-ui-kit/Layout/Navigation/NavItem';
-import { Home, VerifiedUser } from '@material-ui/icons';
+import { NavItem } from '@app/react-material-ui-kit/Layout/Navigation/Item/Item';
+import { NavigationStory } from './NavigationStory';
 
 export default {
   title: 'UIKit/Layout/Navigation',
@@ -18,19 +18,7 @@ export default {
   }
 } as Meta;
 
-export const Navigation: Story<NavigationProps> = args => (
-  <NavigationComponent
-    {...args}
-    items={
-      <>
-        <NavItem startIcon={<Home />} label="Dashboard" />
-        <NavItem label="Posts" />
-        <NavItem label="Users" endIcon={<VerifiedUser />} />
-        <NavItem label="Reports" description="For month" />
-      </>
-    }
-  />
-);
+export const Navigation: Story<NavigationProps> = args => <NavigationStory {...args} />;
 
 Navigation.args = {
   open: true

@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { NavItem, NavItemProps } from '@app/react-material-ui-kit/Layout/Navigation/NavItem';
+import { NavItem, NavItemProps } from '@app/react-material-ui-kit/Layout/Navigation/Item/Item';
 import Link from 'next/link';
 import styled from 'styled-components';
 
