@@ -17,6 +17,7 @@
     "isolatedModules": true,
     "importHelpers": true,
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "noImplicitReturns": true,
     "noErrorTruncation": true,
     "noUnusedParameters": true,
