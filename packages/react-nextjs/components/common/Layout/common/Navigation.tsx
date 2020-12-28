@@ -16,7 +16,12 @@ export const LayoutNavigation = memo(() => {
         <>
           <NavLinkItem label="Home" href="/" startIcon={<Home />} />
           <NavLinkItem label="Other" href="/other" startIcon={<DirectionsCar />} />
-          <NavLinkItem label="Google" href="https://google.com" startIcon={<Search />} />
+          <NavLinkItem
+            label="Google"
+            description="External link"
+            href="https://google.com"
+            startIcon={<Search />}
+          />
         </>
       }
     />
