@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "esnext"],
+    "types": ["next", "node"],
+    "target": "ES6",
+    "module": "CommonJS",
+    "resolveJsonModule": true
+  },
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin"
+    }
+  ],
+  "files": ["./svgr.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}

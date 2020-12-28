@@ -46,7 +46,16 @@ module.exports = api => {
           libraryDirectory: '',
           camel2DashComponentName: false
         },
-        'icons'
+        '@material-ui/icons'
+      ],
+      [
+        require.resolve('babel-plugin-import'),
+        {
+          libraryName: '@app/icons',
+          libraryDirectory: 'src',
+          camel2DashComponentName: false
+        },
+        '@app/icons'
       ]
     ],
     env: {

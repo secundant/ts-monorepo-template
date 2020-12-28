@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   webpack(config, { defaultLoaders }) {
-    const paths = ['react-material-ui-kit', 'react-shared'].flatMap(p => [
+    const paths = ['react-material-ui-kit', 'icons', 'react-shared'].flatMap(p => [
       resolve(process.cwd(), '..', p),
       `@app/${p}`
     ]);

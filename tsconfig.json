@@ -25,6 +25,8 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@app": ["packages/*"],
+      "@app/icons": ["packages/icons/index.ts"],
+      "@app/icons/*": ["packages/icons/*"],
       "@app/react-nextjs/*": ["packages/react-nextjs/*"],
       "@app/react-shared/*": ["packages/react-shared/*"],
       "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"]
