@@ -1,0 +1,11 @@
+{
+  "project": {
+    "rootDir": ".",
+    "sourceDir": "static",
+    "importAlias": "@app/icons"
+  },
+  "destination": {
+    "indexDir": ".",
+    "iconsDir": "src"
+  }
+}
