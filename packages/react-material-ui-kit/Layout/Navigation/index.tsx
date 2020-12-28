@@ -47,6 +47,11 @@ Navigation.displayName = 'Navigation';
 const StyledDrawer = styled(Drawer)`
   grid-area: navigation;
   flex-shrink: 0;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+  left: 0;
 
   & > .MuiPaper-root {
     position: static;
