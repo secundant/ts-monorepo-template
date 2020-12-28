@@ -17,18 +17,13 @@ export interface WriteToFSOptions {
 
 export async function writeToFS({
   destination: { iconsDir },
-  compiled: { javascript, typescript, javascriptJSX, typescriptJSX },
+  compiled: { typescriptJSX },
   source,
   project
 }: WriteToFSOptions): Promise<void> {
   const dirPath = resolve(project.rootDir, iconsDir, dirname(source.path));
 
-  await Promise.all([
-    javascript && writeCompileInfoToFs(resolve(dirPath, `${source.name}.js`), javascript),
-    typescript && writeCompileInfoToFs(resolve(dirPath, `${source.name}.ts`), typescript),
-    javascriptJSX && writeCompileInfoToFs(resolve(dirPath, `${source.name}.jsx`), javascriptJSX),
-    typescriptJSX && writeCompileInfoToFs(resolve(dirPath, `${source.name}.tsx`), typescriptJSX)
-  ]);
+  await writeCompileInfoToFs(resolve(dirPath, `${source.name}.tsx`), typescriptJSX);
 }
 
 export async function writeCompileInfoToFs(
