@@ -1,24 +1,13 @@
 name: pull-request
 on: pull_request
 jobs:
-  lint:
-    name: Lint
+  ValidateCode:
+    name: Check linting, TypeScript and run tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+      - run: yarn install
       - run: yarn lint
-  ts-check:
-    name: Check TS
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
       - run: yarn ts:check
-  test:
-    name: Run test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
       - run: yarn test --passWithNoTests
