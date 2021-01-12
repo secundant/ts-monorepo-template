@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["dom", "esnext"],
-    "types": ["next", "node"],
+    "types": ["node"],
     "target": "ES6",
     "module": "CommonJS",
     "resolveJsonModule": true

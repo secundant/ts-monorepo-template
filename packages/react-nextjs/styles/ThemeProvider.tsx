@@ -5,7 +5,6 @@ import {
 } from '@material-ui/core/styles';
 import React, { ReactElement, ReactNode, useMemo } from 'react';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
-import * as process from 'process';
 import { makeCreateSsrMuiTheme } from '@app/react-nextjs/styles/utils/createSsrMuiTheme';
 import createDefaultTheme from '@app/react-nextjs/styles/themes/default';
 import { CssBaseline } from '@material-ui/core';

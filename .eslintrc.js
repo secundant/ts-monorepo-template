@@ -23,6 +23,9 @@ module.exports = {
       }
     ],
     // Problem - Map has + get
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    // No error for arguments
+    '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }]
   }
 };

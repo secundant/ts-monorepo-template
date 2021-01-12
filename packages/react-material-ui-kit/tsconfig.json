@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["dom", "esnext"],
-    "types": ["next", "node"],
+    "types": ["node"],
     "jsx": "react"
   },
   "plugins": [

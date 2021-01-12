@@ -1,2 +1,5 @@
 packages/react-nextjs/.next/
 node_modules/
+
+packages/graphql/dist
+packages/storybook/dist

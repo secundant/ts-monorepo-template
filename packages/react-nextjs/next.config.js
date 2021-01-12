@@ -15,7 +15,7 @@ module.exports = withBundleAnalyzer({
     // Next (and next-transpile-modules) dont support Yarn workspaces with PnP mode
     config.module.rules.push({
       test: /\.+(js|jsx|mjs|ts|tsx)$/,
-      loader: defaultLoaders.babel,
+      use: defaultLoaders.babel,
       // include all modules in "packages" folder
       include: p => paths.some(pp => p.includes(pp))
     });

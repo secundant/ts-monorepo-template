@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "lib": ["ESNext"],
+    "types": ["node", "faker"],
+    "target": "ESNext",
+    "module": "commonjs",
+    "sourceMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "strictPropertyInitialization": false,
+    "noUnusedParameters": false
+  },
+  "include": ["./**/*.ts"]
+}
