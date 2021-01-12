@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { UserResolver } from '@app/graphql/application/resolvers/user.resolver';
-import { UserService } from '@app/graphql/domain/services/user.service';
-import { LocalUserRepository } from '@app/graphql/infrastructure/repository/User/local.user.repository';
-import { USER_REPOSITORY_TOKEN } from '@app/graphql/constants/di-tokens';
+import { UserResolver } from '@my-project/graphql/application/resolvers/user.resolver';
+import { UserService } from '@my-project/graphql/domain/services/user.service';
+import { LocalUserRepository } from '@my-project/graphql/infrastructure/repository/User/local.user.repository';
+import { USER_REPOSITORY_TOKEN } from '@my-project/graphql/constants/di-tokens';
 import { resolve } from 'path';
 
 @Module({

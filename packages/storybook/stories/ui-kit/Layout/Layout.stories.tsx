@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { Header } from '@app/react-material-ui-kit/Layout/Header';
-import { LayoutRoot, PageBody } from '@app/react-material-ui-kit/Layout/styled';
-import { Text } from '@app/react-material-ui-kit/Typography';
+import { Header } from '@my-project/uikit-web/Layout/Header';
+import { LayoutRoot, PageBody } from '@my-project/uikit-web/Layout/styled';
+import { Text } from '@my-project/uikit-web/Typography';
 import { NavigationStory } from './NavigationStory';
 
 export default {

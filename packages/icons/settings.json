@@ -2,7 +2,7 @@
   "project": {
     "rootDir": ".",
     "sourceDir": "static",
-    "importAlias": "@app/icons"
+    "importAlias": "@my-project/icons"
   },
   "destination": {
     "indexDir": ".",

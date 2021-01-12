@@ -1,6 +1,6 @@
-import { IUserRepository } from '@app/graphql/infrastructure/repository/User/IUserRepository';
-import { User } from '@app/graphql/domain/entities/User';
-import { CreateUserInput } from '@app/graphql/application/dto/inputs/create-user.input';
+import { IUserRepository } from '@my-project/graphql/infrastructure/repository/User/IUserRepository';
+import { User } from '@my-project/graphql/domain/entities/User';
+import { CreateUserInput } from '@my-project/graphql/application/dto/inputs/create-user.input';
 import { random } from 'faker/locale/ru';
 import { plainToClass } from 'class-transformer';
 

@@ -1,7 +1,7 @@
-import { UserService } from '@app/graphql/domain/services/user.service';
+import { UserService } from '@my-project/graphql/domain/services/user.service';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { User } from '@app/graphql/domain/entities/User';
-import { CreateUserInput } from '@app/graphql/application/dto/inputs/create-user.input';
+import { User } from '@my-project/graphql/domain/entities/User';
+import { CreateUserInput } from '@my-project/graphql/application/dto/inputs/create-user.input';
 import { UsePipes, ValidationPipe } from '@nestjs/common';
 
 @Resolver(User)

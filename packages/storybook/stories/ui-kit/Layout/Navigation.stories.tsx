@@ -3,8 +3,8 @@ import React from 'react';
 import {
   Navigation as NavigationComponent,
   NavigationProps
-} from '@app/react-material-ui-kit/Layout/Navigation';
-import { NavItem } from '@app/react-material-ui-kit/Layout/Navigation/Item/Item';
+} from '@my-project/uikit-web/Layout/Navigation';
+import { NavItem } from '@my-project/uikit-web/Layout/Navigation/Item/Item';
 import { NavigationStory } from './NavigationStory';
 
 export default {

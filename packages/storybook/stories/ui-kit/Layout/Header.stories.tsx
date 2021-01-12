@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { Header as HeaderComponent, HeaderProps } from '@app/react-material-ui-kit/Layout/Header';
-import { Text } from '@app/react-material-ui-kit/Typography';
+import { Header as HeaderComponent, HeaderProps } from '@my-project/uikit-web/Layout/Header';
+import { Text } from '@my-project/uikit-web/Typography';
 
 export default {
   title: 'UIKit/Layout/Header',

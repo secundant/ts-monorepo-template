@@ -10,5 +10,5 @@
       "name": "typescript-styled-plugin"
     }
   ],
-  "include": ["**/*.ts", "**/*.tsx", "../react-nextjs/styles/styled-components.theme.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "../client-web/styles/styled-components.theme.d.ts"]
 }

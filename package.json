@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "my-app",
+  "name": "my-project",
   "version": "0.0.1",
   "devDependencies": {
     "@babel/core": "^7.12.10",

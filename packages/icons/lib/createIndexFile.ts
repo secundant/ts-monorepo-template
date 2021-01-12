@@ -1,4 +1,4 @@
-import { IDestinationOptions, IProjectOptions, ISourceInfo } from '@app/icons/types';
+import { IDestinationOptions, IProjectOptions, ISourceInfo } from '@my-project/icons/types';
 import { dirname, join, resolve } from 'path';
 import { writeFile } from 'fs-extra';
 import { format, resolveConfig } from 'prettier';

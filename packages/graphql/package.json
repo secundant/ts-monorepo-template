@@ -1,5 +1,5 @@
 {
-  "name": "@app/graphql",
+  "name": "@my-project/graphql",
   "dependencies": {
     "@nestjs/common": "^7.6.5",
     "@nestjs/core": "^7.6.5",

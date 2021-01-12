@@ -8,8 +8,8 @@ COPY .yarnrc.yml yarn.lock .pnp.js package.json ./
 COPY tsconfig.cjs.json tsconfig.json babel.config.js ./
 COPY packages/ ./packages/
 
-RUN yarn workspace @app/react-nextjs build
-RUN yarn workspaces focus @app/react-nextjs --production
+RUN yarn workspace @my-project/client-web build
+RUN yarn workspaces focus @my-project/client-web --production
 
 # ===
 
@@ -26,7 +26,7 @@ COPY --from=artifacts \
   /home/workspace/.pnp.js \
   /home/workspace/package.json \
   ./
-COPY --from=artifacts /home/workspace/packages/react-nextjs/package.json ./packages/react-nextjs/package.json
-COPY --from=artifacts /home/workspace/packages/react-nextjs/.next /home/workspace/packages/react-nextjs/.next
+COPY --from=artifacts /home/workspace/packages/client-web/package.json ./packages/client-web/package.json
+COPY --from=artifacts /home/workspace/packages/client-web/.next /home/workspace/packages/client-web/.next
 
-CMD yarn workspace @app/react-nextjs start -p ${PORT}
+CMD yarn workspace @my-project/client-web start -p ${PORT}

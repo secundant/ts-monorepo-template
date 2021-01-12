@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@app/react-nextjs/styles/ThemeProvider';
+import { ThemeProvider } from '@my-project/client-web/styles/ThemeProvider';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' }

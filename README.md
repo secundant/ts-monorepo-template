@@ -3,7 +3,7 @@
 Template with most common presets for TS development
 
 - [TypeScript](https://www.typescriptlang.org/) with path aliases for packages
-  (ex. `import { ... } from '@app/my-package/foo/bar'`)
+  (ex. `import { ... } from '@my-project/my-package/foo/bar'`)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/) with prettier and typescript integrations
 - [Jest](https://jestjs.io/) as test runner
@@ -21,4 +21,4 @@ Template with most common presets for TS development
 1. Install [Yarn](https://yarnpkg.com/getting-started/install)
 2. Upgrade Yarn version: `yarn set version latest`
 3. That's all :) Just run any script from root or one of packages
-   (ex. `yarn workspace @app/react-nextjs dev`)
+   (ex. `yarn workspace @my-project/client-web dev`)

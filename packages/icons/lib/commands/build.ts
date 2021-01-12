@@ -1,11 +1,11 @@
-import { ISourceInfo } from '@app/icons/types';
+import { ISourceInfo } from '@my-project/icons/types';
 import * as process from 'process';
-import { scanProject } from '@app/icons/lib/scanProject';
-import { readSourceFile } from '@app/icons/lib/readSourceFile';
-import { writeToFS } from '@app/icons/lib/writeToFS';
-import { compileSource } from '@app/icons/lib/compileSource';
-import { createIndexFile } from '@app/icons/lib/createIndexFile';
-import { destination, project } from '@app/icons/settings.json';
+import { scanProject } from '@my-project/icons/lib/scanProject';
+import { readSourceFile } from '@my-project/icons/lib/readSourceFile';
+import { writeToFS } from '@my-project/icons/lib/writeToFS';
+import { compileSource } from '@my-project/icons/lib/compileSource';
+import { createIndexFile } from '@my-project/icons/lib/createIndexFile';
+import { destination, project } from '@my-project/icons/settings.json';
 import { resolve } from 'path';
 
 project.rootDir = resolve(process.cwd(), project.rootDir);
