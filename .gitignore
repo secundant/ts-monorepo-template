@@ -12,3 +12,11 @@ tsconfig.tsbuildinfo
 
 packages/graphql/dist
 packages/storybook/dist
+
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored but nested for e2e directories
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
