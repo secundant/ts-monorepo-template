@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["dom", "esnext"],
-    "types": ["next", "node"],
+    "types": ["node"],
     "jsx": "react"
   },
   "plugins": [
@@ -10,5 +10,5 @@
       "name": "typescript-styled-plugin"
     }
   ],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "../react-nextjs/styles/styled-components.theme.d.ts"]
 }

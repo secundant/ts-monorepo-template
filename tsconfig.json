@@ -2,7 +2,6 @@
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types"],
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
     "types": ["jest", "node"],
@@ -30,7 +29,8 @@
       "@app/icons/*": ["packages/icons/*"],
       "@app/react-nextjs/*": ["packages/react-nextjs/*"],
       "@app/react-shared/*": ["packages/react-shared/*"],
-      "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"]
+      "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"],
+      "@app/graphql/*": ["packages/graphql/*"]
     }
   },
   "include": ["./packages/**/*.ts", "./packages/**/*.tsx"]

@@ -16,7 +16,7 @@ export function createHOC<WrapperProps extends {}>({
 
         return (
           <Component {...props}>
-            <TargetComponent {...(forwardedProps as Props)} />
+            <TargetComponent {...(forwardedProps as any)} />
           </Component>
         );
       },
@@ -41,5 +41,5 @@ export interface HOC<WrapperProps extends {}> {
 
 export interface HOCOptions<WrapperProps extends {}> {
   Component: ComponentType<WrapperProps>;
-  extractProps: Array<keyof WrapperProps>;
+  extractProps: Array<Extract<keyof WrapperProps, string>>;
 }

@@ -3,8 +3,12 @@
 
 coverage
 
+tsconfig.tsbuildinfo
 .eslintcache
 *.log
 **/*.local
 
 **/node_modules/
+
+packages/graphql/dist
+packages/storybook/dist
