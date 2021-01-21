@@ -1,14 +1,15 @@
-const { resolve } = require('path');
+const { resolve, basename } = require('path');
+const { readdirSync } = require('fs');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 });
 
 module.exports = withBundleAnalyzer({
   webpack(config, { defaultLoaders }) {
-    const paths = ['uikit-web', 'icons', 'shared'].flatMap(p => [
-      resolve(process.cwd(), '..', p),
-      `@my-project/${p}`
-    ]);
+    const selfDirName = basename(__dirname);
+    const monorepoPackages = readdirSync(resolve(__dirname, '..'))
+      .filter(name => name !== selfDirName)
+      .flatMap(name => [resolve(__dirname, '..', name), `@my-project/${name}`]);
 
     defaultLoaders.babel.options.rootMode = 'upward';
 
@@ -17,7 +18,7 @@ module.exports = withBundleAnalyzer({
       test: /\.+(js|jsx|mjs|ts|tsx)$/,
       use: defaultLoaders.babel,
       // include all modules in "packages" folder
-      include: p => paths.some(pp => p.includes(pp))
+      include: importName => monorepoPackages.some(name => importName.includes(name))
     });
 
     return config;
