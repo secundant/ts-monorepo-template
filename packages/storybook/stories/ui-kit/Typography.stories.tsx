@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { Text, TextProps } from '@app/react-material-ui-kit/Typography';
+import { Text, TextProps } from '@my-project/uikit-web/Typography';
 import { Grid } from '@material-ui/core';
 
 export default {

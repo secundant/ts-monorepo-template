@@ -51,11 +51,11 @@ module.exports = api => {
       [
         require.resolve('babel-plugin-import'),
         {
-          libraryName: '@app/icons',
+          libraryName: '@my-project/icons',
           libraryDirectory: 'src',
           camel2DashComponentName: false
         },
-        '@app/icons'
+        '@my-project/icons'
       ]
     ],
     env: {

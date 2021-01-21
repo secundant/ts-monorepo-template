@@ -1,4 +1,4 @@
-import { ICompileInfo, ISourceInfo } from '@app/icons/types';
+import { ICompileInfo, ISourceInfo } from '@my-project/icons/types';
 import svgr from '@svgr/core';
 
 export async function compileSource({ content, name }: ISourceInfo): Promise<ICompileInfo> {

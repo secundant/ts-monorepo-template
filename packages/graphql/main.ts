@@ -1,4 +1,4 @@
-import { AppModule } from '@app/graphql/app.module';
+import { AppModule } from '@my-project/graphql/app.module';
 import { NestFactory } from '@nestjs/core';
 
 declare const module: any;

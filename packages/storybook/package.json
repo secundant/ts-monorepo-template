@@ -1,5 +1,5 @@
 {
-  "name": "@app/storybook",
+  "name": "@my-project/storybook",
   "version": "0.0.1",
   "description": "Stories for app and uikit",
   "devDependencies": {
@@ -27,6 +27,6 @@
   },
   "scripts": {
     "build": "build-storybook -c . -o dist",
-    "start": "start-storybook -c . -s ../react-nextjs/public -p 6006"
+    "start": "start-storybook -c . -s ../client-web/public -p 6006"
   }
 }

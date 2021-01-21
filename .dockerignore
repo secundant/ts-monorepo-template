@@ -1,4 +1,4 @@
-packages/react-nextjs/.next/
+packages/client-web/.next/
 node_modules/
 
 packages/graphql/dist

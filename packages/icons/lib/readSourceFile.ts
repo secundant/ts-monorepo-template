@@ -1,5 +1,5 @@
 import { basename, resolve } from 'path';
-import { IProjectOptions, ISourceInfo } from '@app/icons/types';
+import { IProjectOptions, ISourceInfo } from '@my-project/icons/types';
 import { camelCase, upperFirst } from 'lodash';
 import { readFile } from 'fs-extra';
 

@@ -25,12 +25,12 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@app": ["packages/*"],
-      "@app/icons": ["packages/icons/index.ts"],
-      "@app/icons/*": ["packages/icons/*"],
-      "@app/react-nextjs/*": ["packages/react-nextjs/*"],
-      "@app/react-shared/*": ["packages/react-shared/*"],
-      "@app/react-material-ui-kit/*": ["packages/react-material-ui-kit/*"],
-      "@app/graphql/*": ["packages/graphql/*"]
+      "@my-project/icons": ["packages/icons/index.ts"],
+      "@my-project/icons/*": ["packages/icons/*"],
+      "@my-project/client-web/*": ["packages/client-web/*"],
+      "@my-project/shared/*": ["packages/shared/*"],
+      "@my-project/uikit-web/*": ["packages/uikit-web/*"],
+      "@my-project/graphql/*": ["packages/graphql/*"]
     }
   },
   "include": ["./packages/**/*.ts", "./packages/**/*.tsx"]

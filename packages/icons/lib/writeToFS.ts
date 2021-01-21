@@ -4,7 +4,7 @@ import {
   IDestinationOptions,
   IProjectOptions,
   ISourceInfo
-} from '@app/icons/types';
+} from '@my-project/icons/types';
 import { dirname, resolve } from 'path';
 import { ensureDir, writeFile } from 'fs-extra';
 

@@ -1,4 +1,4 @@
-import { IProjectOptions } from '@app/icons/types';
+import { IProjectOptions } from '@my-project/icons/types';
 import { resolve } from 'path';
 import { sync } from 'glob';
 
