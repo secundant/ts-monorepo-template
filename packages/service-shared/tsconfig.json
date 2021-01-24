@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.common.nest.json",
+  "compilerOptions": {
+    "types": ["node", "rimraf", "webpack", "webpack-env"],
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./**/*.ts"]
+}

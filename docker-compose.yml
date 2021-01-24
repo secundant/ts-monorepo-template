@@ -1,14 +1,52 @@
 version: '3.8'
 
 services:
-  client-web:
+  database:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+
+  service-users:
     build:
       context: .
       dockerfile: Dockerfile
-      target: release
-    image: client-web
-    container_name: client-web
+      target: service-users
+    image: service-users
+    container_name: service-users
+    depends_on:
+      - database
     environment:
-      PORT: 80
+      HOST: 0.0.0.0
+      DATABASE_HOST: database
     ports:
-      - 80:80
+      - 20001:20001
+    networks:
+      - default
+
+
+  service-auth:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-auth
+    image: service-auth
+    container_name: service-auth
+    depends_on:
+      - database
+      - service-users
+    environment:
+      HOST: 0.0.0.0
+      DATABASE_HOST: database
+      SERVICE_USERS_HOST: service-users
+    ports:
+      - 20002:20002
+    networks:
+      - default
+
+networks:
+  default:

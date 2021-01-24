@@ -1,19 +1,8 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.common.nest.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "dist",
-    "lib": ["ESNext"],
-    "types": ["node", "faker"],
-    "target": "ESNext",
-    "module": "commonjs",
-    "sourceMap": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "incremental": true,
-    "strictPropertyInitialization": false,
-    "noUnusedParameters": false
+    "outDir": "dist"
   },
   "include": ["./**/*.ts"]
 }

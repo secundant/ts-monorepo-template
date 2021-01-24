@@ -44,6 +44,6 @@ module.exports = {
      *   myField: string;
      * }
      */
-    '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }]
+    '@typescript-eslint/no-unused-vars': ['error', { args: 'none', varsIgnorePattern: '^_' }]
   }
 };
