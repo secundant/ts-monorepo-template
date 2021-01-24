@@ -1,5 +1,15 @@
+.idea
+.DS_Store
+
 packages/client-web/.next/
 node_modules/
 
-packages/graphql/dist
-packages/storybook/dist
+packages/**/dist
+.github
+
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

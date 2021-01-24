@@ -10,8 +10,7 @@ tsconfig.tsbuildinfo
 
 **/node_modules/
 
-packages/graphql/dist
-packages/storybook/dist
+packages/**/dist
 
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored but nested for e2e directories
 .yarn/*

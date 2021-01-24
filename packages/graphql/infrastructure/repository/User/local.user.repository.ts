@@ -1,6 +1,7 @@
 import { IUserRepository } from '@my-project/graphql/infrastructure/repository/User/IUserRepository';
 import { User } from '@my-project/graphql/domain/entities/User';
 import { CreateUserInput } from '@my-project/graphql/application/dto/inputs/create-user.input';
+// @ts-expect-error TODO delete
 import { random } from 'faker/locale/ru';
 import { plainToClass } from 'class-transformer';
 
