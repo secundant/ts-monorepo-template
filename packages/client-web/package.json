@@ -6,7 +6,7 @@
     "@next/bundle-analyzer": "^10.0.5",
     "axios": "^0.21.1",
     "css-mediaquery": "^0.1.2",
-    "next": "^10.0.5",
+    "next": "^12.1.0",
     "nprogress": "^0.2.0",
     "ramda": "^0.27.1",
     "react": "^17.0.1",
