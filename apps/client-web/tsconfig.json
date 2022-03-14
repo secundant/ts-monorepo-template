@@ -6,7 +6,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "types": ["next", "node"],
     "paths": {
-      "@/*": ["./**/*"]
+      "@/*": ["./*"]
     },
     "incremental": true,
     "allowJs": true,
