@@ -1,4 +1,4 @@
-import { TouchableElementProps } from '../../theme';
+import { TouchableElementProps } from '../theme';
 import { ReactNode } from 'react';
 
 export interface RegularButtonProps extends TouchableElementProps<HTMLButtonElement> {

@@ -2,6 +2,11 @@
   "name": "@libs/ui",
   "version": "0.0.1",
   "packageManager": "yarn@3.0.0",
+  "scripts": {
+    "build": "yarn cleanup && yarn generate:icons",
+    "cleanup": "yarn dlx rimraf icons",
+    "generate:icons": "svgr --out-dir icons --ignore-existing -- static/icons"
+  },
   "dependencies": {
     "@fontsource/roboto": "^4.5.3",
     "clsx": "^1.1.1",
@@ -10,12 +15,15 @@
   },
   "devDependencies": {
     "@libs/config": "*",
+    "@svgr/cli": "^6.2.1",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
     "@types/tailwindcss": "^3.0.9",
     "tailwindcss": "^3.0.23"
   },
   "peerDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
   }
 }

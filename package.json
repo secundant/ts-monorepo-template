@@ -25,10 +25,6 @@
   "scripts": {
     "lint": "yarn check:eslint --fix",
     "test": "jest --maxWorkers=1",
-    "check": "yarn check:typescript && yarn check:eslint && yarn check:doctor",
-    "check:eslint": "eslint apps/**/*.{ts,tsx}",
-    "check:doctor": "yarn dlx @yarnpkg/doctor",
-    "check:typescript": "yarn workspaces foreach -ptA run check:typescript",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "postinstall": "husky install"
   },

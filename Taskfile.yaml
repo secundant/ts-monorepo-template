@@ -12,14 +12,18 @@ tasks:
     summary: Add component to exists folder
     cmds:
       - hygen ui add-component
-  generate:icons:
+  ui:build:
     cmds:
-      - yarn workspace @libs/icons build
-  generate:
+      - yarn workspace @libs/ui build
+  app:build:
+    cmds:
+      - yarn workspace @apps/client-web build
+  build:
     deps:
-      - generate:icons
+      - ui:build
+      - app:build
   check:
     cmds:
       - yarn dlx @yarnpkg/doctor
-      - yarn lint
+      - yarn eslint **/*.{ts,tsx,js}
       - yarn test

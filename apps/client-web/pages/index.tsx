@@ -1,5 +1,6 @@
-import { Button, RegularButton } from '@libs/ui/core/Button';
-import { Spaced } from '@libs/ui/core/Grid';
+import { Button, RegularButton } from '@libs/ui/Button';
+import { Spaced } from '@libs/ui/Grid';
+import { AddIcon, KeyboardArrowLeftIcon } from '@libs/ui/icons';
 
 export default function IndexPage() {
   return (
@@ -14,6 +15,8 @@ export default function IndexPage() {
         </Button>
         <Button appearance="text">Hello</Button>
         <Button appearance="text" disabled>
+          <AddIcon fontSize={64} />
+          <KeyboardArrowLeftIcon color="#f00" />
           Hello
         </Button>
         <Button appearance="text" disabled color="secondary">
