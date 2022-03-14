@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "types": ["jest", "node"],
     "target": "esnext",
     "module": "esnext",
     "esModuleInterop": true,

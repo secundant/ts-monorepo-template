@@ -1,0 +1,17 @@
+{
+  "extends": "@libs/config/ts/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": ["next", "node"],
+    "paths": {
+      "@/*": ["./**/*"]
+    },
+    "incremental": true,
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

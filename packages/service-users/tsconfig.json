@@ -1,8 +1,0 @@
-{
-  "extends": "../../tsconfig.common.nest.json",
-  "compilerOptions": {
-    "types": ["node", "faker"]
-  },
-  "files": ["./main.ts"],
-  "include": ["./**/*.ts"]
-}

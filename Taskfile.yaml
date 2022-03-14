@@ -1,0 +1,25 @@
+version: "3"
+tasks:
+  ws:new:
+    summary: Create new package
+    cmds:
+      - hygen ws new
+  ui:new:
+    summary: Create new UI component
+    cmds:
+      - hygen ui new
+  ui:add-component:
+    summary: Add component to exists folder
+    cmds:
+      - hygen ui add-component
+  generate:icons:
+    cmds:
+      - yarn workspace @libs/icons build
+  generate:
+    deps:
+      - generate:icons
+  check:
+    cmds:
+      - yarn dlx @yarnpkg/doctor
+      - yarn lint
+      - yarn test

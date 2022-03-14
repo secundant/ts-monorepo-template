@@ -1,5 +1,5 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
 const { compilerOptions } = require('./tsconfig');
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
 
 module.exports = {
   preset: 'ts-jest',
@@ -20,7 +20,7 @@ module.exports = {
   testRunner: 'jest-circus/runner',
   globals: {
     'ts-jest': {
-      tsConfig: 'tsconfig.cjs.json',
+      tsConfig: 'tsconfig.node.json',
       isolatedModules: true
     }
   }

@@ -7,7 +7,7 @@ WORKDIR /home/workspace
 COPY .yarn/ .yarn/
 COPY .yarnrc.yml yarn.lock .pnp.js package.json ./
 
-COPY tsconfig.cjs.json tsconfig.json tsconfig.common.nest.json babel.config.js ./
+COPY tsconfig.node.json tsconfig.json tsconfig.common.nest.json babel.config.js ./
 
 # TODO Make template/script for copying all package.json files
 
