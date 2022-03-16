@@ -1,0 +1,30 @@
+import * as icons from '@libs/ui/icons';
+import { IconPreviewButton } from './IconPreviewButton';
+
+<Meta title="Components/Icons" />
+
+# Icons
+
+All icons was generated via svgr
+
+## Usage
+
+```jsx
+import { AddIcon } from '@libs/ui/icons';
+
+(
+  <Input startIcon={<AddIcon />} />
+  <Alert>
+    <AddIcon fontSize="2em" color="white" />
+    <Typography>...</Typography>
+  </Alert>
+)
+```
+
+<div className="flex flex-wrap w-full justify-center items-center">
+  {Object.entries(icons).map(
+    ([name, Icon]) => (
+      <IconPreviewButton key={name} name={name} Icon={Icon} />
+    )
+  )}
+</div>

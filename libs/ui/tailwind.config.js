@@ -7,7 +7,7 @@ const withOpacityValue =
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  content: ['./core/**/*.tsx'],
+  content: ['./**/*.tsx', './**/*.mdx'],
   theme: {
     extend: {
       colors: {
