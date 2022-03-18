@@ -1,12 +1,21 @@
-import { Button, RegularButton } from '@libs/ui/Button';
-import { Spaced } from '@libs/ui/Grid';
+import { Button, RegularButton } from '@libs/ui/core/button';
+import { Spaced } from '@libs/ui/core/grid';
+import { Popover } from '@libs/ui/core/popover';
 import { AddIcon, KeyboardArrowLeftIcon } from '@libs/ui/icons';
+import { useState } from 'react';
 
 export default function IndexPage() {
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+
   return (
     <div className="w-screen h-screen flex justify-center items-center">
       <Spaced>
-        <RegularButton>Regular</RegularButton>
+        <Popover open={!!anchorEl} anchorNode={anchorEl} onClose={() => setAnchorEl(null)}>
+          Popover example
+        </Popover>
+        <RegularButton onClick={e => setAnchorEl(e.target as HTMLElement)}>
+          Open popover
+        </RegularButton>
         <Button>Hello</Button>
         <Button color="secondary">Hello</Button>
         <Button appearance="outlined">Hello</Button>

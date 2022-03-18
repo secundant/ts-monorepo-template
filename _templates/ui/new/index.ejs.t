@@ -2,7 +2,7 @@
 to: libs/ui/core/<%=name%>/index.ts
 ---
 // Components
-export { <%=name%> } from './<%=name%>';
+export { <%=h.changeCase.pascalCase(name)%> } from './<%=name%>';
 
 // Types
-export type { <%=name%>Props } from './<%=name%>';
+export type { <%=h.changeCase.pascalCase(name)%>Props } from './<%=name%>';

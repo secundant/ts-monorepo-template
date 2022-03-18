@@ -12,13 +12,17 @@ All icons was generated via svgr
 ```jsx
 import { AddIcon } from '@libs/ui/icons';
 
-(
-  <Input startIcon={<AddIcon />} />
-  <Alert>
-    <AddIcon fontSize="2em" color="white" />
-    <Typography>...</Typography>
-  </Alert>
-)
+function MyComponent() {
+  return (
+    <>
+      <Input startIcon={<AddIcon />} />
+      <Alert>
+        <AddIcon fontSize="2em" color="white" />
+        <Typography>...</Typography>
+      </Alert>
+    </>
+  )
+}
 ```
 
 <div className="flex flex-wrap w-full justify-center items-center">

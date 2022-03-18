@@ -8,6 +8,6 @@
     "noEmit": true,
     "incremental": true
   },
-  "include": ["types.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["types/global.d.ts", "types/global.overrides.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

@@ -31,7 +31,7 @@ module.exports = withPlugins(
     withBundleAnalyzer({
       enabled: settings.enableBundleAnalyzer
     }),
-    withTranspileModules(['@libs/ui'])
+    withTranspileModules(['@libs/ui', '@libs/utils'])
   ],
   configuration
 );

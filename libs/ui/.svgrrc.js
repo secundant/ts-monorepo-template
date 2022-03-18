@@ -36,7 +36,7 @@ module.exports = {
     const viewBox = jsx.openingElement.attributes.find(atr => atr.name.name === 'viewBox');
 
     return tpl`
-    import createSvgIcon from '@libs/ui/SvgIcon/create';
+    import createSvgIcon from '@libs/ui/core/svg-icon/create';
 
     export default createSvgIcon(
       "${componentName}",

@@ -9,4 +9,19 @@
   --palette-secondary-light: #5cc689;
   --palette-secondary-main: #27ae60;
   --palette-secondary-dark: #269a5b;
+
+  /* Durations for Transition components */
+  --transition-duration-entering-screen: 225ms;
+  --transition-duration-leaving-screen: 195ms;
+  --transition-duration-standard: 300ms;
+
+  /* This is the most common easing curve. */
+  --transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Objects enter the screen at full velocity from off-screen and
+     slowly decelerate to a resting point. */
+  --transition-easing-ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Objects leave the screen at full velocity. They do not decelerate when off-screen. */
+  --transition-easing-ease-in: cubic-bezier(0.4, 0, 0.2, 1);
+  /* The sharp curve is used by objects that may return to the screen at any time. */
+  --transition-easing-sharp: cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -5,7 +5,20 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions'
+    '@storybook/addon-interactions',
+    [
+      '@storybook/addon-postcss',
+      {
+        options: {
+          postcssLoaderOptions: {
+            postcssOptions: {
+              plugins: [require.resolve('tailwindcss')]
+            },
+            implementation: require('postcss')
+          }
+        }
+      }
+    ]
   ],
   framework: '@storybook/react',
   typescript: {
@@ -17,20 +30,42 @@ module.exports = {
       propFilter: prop => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
     }
   },
-  webpackFinal(config) {
-    config.module.rules.push({
-      test: /\,css&/,
-      use: [
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: [require('tailwindcss'), require('autoprefixer')]
+  webpackFinal(config = {}, options = {}) {
+    const cssRule = config.module.rules.find(_ => _ && _.test && _.test.toString() === css_regex);
+
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [
+          ...config.module.rules.filter(_ => _ && _.test && _.test.toString() !== css_regex),
+          {
+            ...cssRule,
+            exclude: /\.module\.css$/
+          },
+          {
+            ...cssRule,
+            test: /\.module\.css$/,
+            use: cssRule.use.map(_ => {
+              if (_ && _.loader && _.loader.match(/[\/\\]css-loader/g)) {
+                return {
+                  ..._,
+                  options: {
+                    ..._.options,
+                    modules: {
+                      localIdentName: '[name]__[local]__[hash:base64:5]'
+                    }
+                  }
+                };
+              }
+
+              return _;
+            })
           }
-        }
-      ],
-      include: path.resolve(__dirname, '../')
-    });
-    return config;
+        ]
+      }
+    };
   }
 };
+
+const css_regex = '/\\.css$/';
