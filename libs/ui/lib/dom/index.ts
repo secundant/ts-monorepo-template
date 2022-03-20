@@ -1,4 +1,3 @@
-export * from './focus';
 export * from './shared';
 export * from './overflow';
 export * from './tabbable';

@@ -1,23 +1,21 @@
 {
-  "name": "@apps/client-web",
+  "name": "@apps/todo-web",
+  "version": "0.0.1",
+  "packageManager": "yarn@3.2.0",
   "dependencies": {
     "@libs/ui": "workspace:*",
+    "@libs/utils": "workspace:*",
+    "clsx": "^1.1.1",
+    "effector": "^22.2.0",
+    "effector-react": "^22.0.6",
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@libs/config": "workspace:*",
-    "@next/bundle-analyzer": "^12.1.0",
-    "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
-    "@types/tailwindcss": "^3.0.9",
-    "autoprefixer": "^10.4.2",
-    "next-compose-plugins": "^2.2.1",
-    "next-transpile-modules": "^9.0.0",
-    "postcss": "^8.4.8",
-    "tailwindcss": "^3.0.23",
     "typescript": "^4.6.2"
   },
   "scripts": {

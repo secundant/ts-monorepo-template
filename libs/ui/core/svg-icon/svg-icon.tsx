@@ -11,16 +11,7 @@ export interface SvgIconProps
 
 export const SvgIcon = forwardRef(
   (
-    {
-      titleAccess,
-      color = 'inherit',
-      fontSize,
-      htmlColor,
-      className,
-      children,
-      style,
-      viewBox
-    }: SvgIconProps,
+    { titleAccess, color, fontSize, htmlColor, className, children, style, viewBox }: SvgIconProps,
     ref: ForwardedRef<SVGSVGElement>
   ) => {
     return (

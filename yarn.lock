@@ -37,6 +37,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@apps/todo-web@workspace:apps/todo-web":
+  version: 0.0.0-use.local
+  resolution: "@apps/todo-web@workspace:apps/todo-web"
+  dependencies:
+    "@libs/config": "workspace:*"
+    "@libs/ui": "workspace:*"
+    "@libs/utils": "workspace:*"
+    "@types/react": ^17.0.40
+    "@types/react-dom": ^17.0.13
+    clsx: ^1.1.1
+    effector: ^22.2.0
+    effector-react: ^22.0.6
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.6.2
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.5.5, @babel/code-frame@npm:^7.8.3":
   version: 7.16.7
   resolution: "@babel/code-frame@npm:7.16.7"
@@ -2194,9 +2213,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@libs/config@workspace:libs/config"
   dependencies:
+    "@next/bundle-analyzer": ^12.1.0
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.21
+    next-compose-plugins: ^2.2.1
+    next-transpile-modules: ^9.0.0
     typescript: ^4.6.2
+  peerDependencies:
+    next: ^12.1.0
+  peerDependenciesMeta:
+    next:
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -2247,7 +2274,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@libs/utils@*, @libs/utils@workspace:libs/utils":
+"@libs/utils@*, @libs/utils@workspace:*, @libs/utils@workspace:libs/utils":
   version: 0.0.0-use.local
   resolution: "@libs/utils@workspace:libs/utils"
   dependencies:
@@ -7578,6 +7605,23 @@ __metadata:
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
   checksum: 1b4cac778d64ce3b582a7e26b218afe07e207a0f9bfe13cc7395a6d307849cfe361e65033c3251e00c27dd060cab43014c2d6b2647676135e18b77d2d05b3f4f
+  languageName: node
+  linkType: hard
+
+"effector-react@npm:^22.0.6":
+  version: 22.0.6
+  resolution: "effector-react@npm:22.0.6"
+  peerDependencies:
+    effector: ^22.0.2
+    react: ">=16.8.0 <19.0.0"
+  checksum: afb8d9a797b8aa52e7172468d8f012d1d93c06028d456ece433f18775def3234e99b3452086687eaeea2f4756606b606ce56b2ed4d5ab5a8e4230f8adaf488a1
+  languageName: node
+  linkType: hard
+
+"effector@npm:^22.2.0":
+  version: 22.2.0
+  resolution: "effector@npm:22.2.0"
+  checksum: 1a54331663e8de46bb4f3d778fd8f0679c4ce395fba460ff076fadfdbc6fa5244769ff8c07e1bb411b914b2041e6f95ad42eb9c3b857b0b76aacb99f8703ca45
   languageName: node
   linkType: hard
 

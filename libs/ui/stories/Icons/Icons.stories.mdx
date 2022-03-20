@@ -1,5 +1,4 @@
-import * as icons from '@libs/ui/icons';
-import { IconPreviewButton } from './IconPreviewButton';
+import * as icons from '@libs/ui/icons'; import { IconsPreview } from './icons-preview';
 
 <Meta title="Components/Icons" />
 
@@ -26,9 +25,5 @@ function MyComponent() {
 ```
 
 <div className="flex flex-wrap w-full justify-center items-center">
-  {Object.entries(icons).map(
-    ([name, Icon]) => (
-      <IconPreviewButton key={name} name={name} Icon={Icon} />
-    )
-  )}
+  <IconsPreview components={icons} />
 </div>
