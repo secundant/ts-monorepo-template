@@ -1,4 +1,5 @@
 import { TouchableElementProps } from '../../types';
+import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 export interface RegularButtonProps extends TouchableElementProps<HTMLButtonElement> {
@@ -18,7 +19,11 @@ export function RegularButton({
       onClick={onClick}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
-      className="bg-primary-main hover:bg-primary-light focus:bg-primary-dark shadow-md hover:shadow:md active:shadow-lg transition text-white rounded-md px-4 py-2"
+      className={clsx(
+        'bg-primary-main text-white shadow-el-sm rounded-md px-4 py-2',
+        !disabled &&
+          'transition hover:bg-primary-light focus:bg-primary-dark hover:shadow-el-md active:shadow-el-lg active:scale-95'
+      )}
     >
       {children}
     </button>

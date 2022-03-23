@@ -1896,6 +1896,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/inter@npm:^4.5.5":
+  version: 4.5.5
+  resolution: "@fontsource/inter@npm:4.5.5"
+  checksum: aa6b63229dd565b4e43effbc6ed70b1bb0fffe3f8da43ba5c215d7a50d6bd1e08fd40cd0cb8f66c10346ce9584d9647004c819110443133b31e9ba9c989295c6
+  languageName: node
+  linkType: hard
+
 "@fontsource/roboto@npm:^4.5.3":
   version: 4.5.3
   resolution: "@fontsource/roboto@npm:4.5.3"
@@ -2241,6 +2248,7 @@ __metadata:
   resolution: "@libs/ui@workspace:libs/ui"
   dependencies:
     "@babel/core": ^7.17.7
+    "@fontsource/inter": ^4.5.5
     "@fontsource/roboto": ^4.5.3
     "@libs/config": "*"
     "@libs/utils": "*"

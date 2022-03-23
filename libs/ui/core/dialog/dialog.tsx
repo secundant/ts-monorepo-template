@@ -27,7 +27,7 @@ export function Dialog({
         <Paper
           role="dialog"
           className={clsx(
-            'absolute-center max-h-[calc(100%-32px)] overflow-y-auto',
+            'absolute-center max-h-[calc(100%-32px)] overflow-y-auto outline-none',
             fullWidth && 'w-[calc(100%-32px)]',
             maxWidth && 'max-w-screen-lg',
             className

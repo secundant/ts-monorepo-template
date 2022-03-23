@@ -7,4 +7,16 @@
     @apply absolute left-1/2 top-1/2;
     transform: translate(-50%, -50%);
   }
+
+  .input-box {
+    @apply transition border border-gray-300 rounded-md outline-none outline-offset-0;
+  }
+
+  .input-box:not([aria-disabled="true"]) {
+    @apply hover:border-gray-500 focus:border-primary-main focus:outline-1 focus:outline-primary-main;
+  }
+
+  .input-box[aria-invalid="true"] {
+    @apply border-red-800 outline-red-800;
+  }
 }

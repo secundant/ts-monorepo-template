@@ -6,12 +6,20 @@ export interface SpacedProps {
   className?: string;
   size?: number; // TODO Add size
   children: NonNullable<ReactNode>;
+  direction?: 'row' | 'column';
+  wrap?: boolean;
+  align?: 'start' | 'end' | 'center';
 }
 
-export function Spaced({ children, className, size = 16 }: SpacedProps) {
+export function Spaced({ children, className, size = 16, direction = 'row', wrap }: SpacedProps) {
   return (
     <div
-      className={clsx(styles.Spaced, className)}
+      className={clsx(
+        styles.Spaced,
+        directions[direction],
+        wrap ? 'flex-wrap' : 'flex-nowrap',
+        className
+      )}
       style={
         {
           '--spaced-size': `${size}px`
@@ -22,3 +30,8 @@ export function Spaced({ children, className, size = 16 }: SpacedProps) {
     </div>
   );
 }
+
+const directions = {
+  row: 'flex-row',
+  column: 'flex-col'
+};

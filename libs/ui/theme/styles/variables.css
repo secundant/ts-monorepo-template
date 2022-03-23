@@ -24,4 +24,12 @@
   --transition-easing-ease-in: cubic-bezier(0.4, 0, 0.2, 1);
   /* The sharp curve is used by objects that may return to the screen at any time. */
   --transition-easing-sharp: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --spacing-px: 6px;
+  --spacing-2xs: calc(0.5 * var(--spacing-px));
+  --spacing-xs: calc(1 * var(--spacing-px));
+  --spacing-sm: calc(2 * var(--spacing-px));
+  --spacing-md: calc(3 * var(--spacing-px));
+  --spacing-lg: calc(4 * var(--spacing-px));
+  --spacing-xl: calc(5 * var(--spacing-px));
 }

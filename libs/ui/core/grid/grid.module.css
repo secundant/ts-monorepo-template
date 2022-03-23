@@ -3,12 +3,13 @@ Spaced
  */
 
 .Spaced {
-  @apply flex flex-row items-center;
+  @apply flex items-center;
   --spaced-size: 0;
+  --spaced-size-reversed: calc(var(--spaced-size) * -1);
 }
 
 .Spaced:not(:empty) {
-  margin: calc(var(--spaced-size) * -1);
+  margin: var(--spaced-size-reversed);
 }
 
 .Spaced > * {

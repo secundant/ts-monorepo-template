@@ -10,6 +10,7 @@
     "build:storybook": "build-storybook"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.5",
     "@fontsource/roboto": "^4.5.3",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.8",
