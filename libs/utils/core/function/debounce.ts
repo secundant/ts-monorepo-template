@@ -1,20 +1,25 @@
+export interface Debounced<This, Args extends any[]> {
+  (this: This, ...args: Args): void;
+  clear(): void;
+  /**
+   * Original function
+   */
+  fn(this: This, ...args: Args): any;
+}
+
 // Corresponds to 10 frames at 60 Hz.
 // A few bytes payload overhead when lodash/debounce is ~3 kB and debounce ~300 B.
 export function debounce<This, Args extends any[]>(
-  func: (this: This, ...args: Args) => any,
+  fn: (this: This, ...args: Args) => any,
   wait = 166
-): {
-  (this: This, ...args: Args): void;
-  clear(): void;
-} {
-  let timeout: any;
-  const clear = () => clearTimeout(timeout);
+): Debounced<This, Args> {
+  let timeout: number;
 
   function debounced(this: This, ...args: Args) {
-    clear();
-    timeout = setTimeout(() => func.apply(this, args), wait);
+    debounced.clear();
+    timeout = setTimeout(() => fn.apply(this, args), wait);
   }
-
-  debounced.clear = clear;
+  debounced.fn = fn;
+  debounced.clear = () => clearTimeout(timeout);
   return debounced;
 }
