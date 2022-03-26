@@ -8,6 +8,7 @@ const configuration = {
     esmExternals: false,
     externalDir: false
   },
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true
   }

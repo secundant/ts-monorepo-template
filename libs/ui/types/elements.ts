@@ -1,5 +1,12 @@
 import { MergeProps, PropsOf } from './common';
-import { AriaAttributes, AriaRole, CSSProperties, ElementType, MouseEvent } from 'react';
+import {
+  AriaAttributes,
+  AriaRole,
+  CSSProperties,
+  ElementType,
+  KeyboardEvent,
+  MouseEvent
+} from 'react';
 
 export interface HTMLElementCoreProps {
   id?: string;
@@ -14,11 +21,18 @@ export interface HTMLElementProps extends HTMLElementCoreProps, AriaAttributes {
 
 export interface TouchableElementProps<E extends Element = Element> {
   disabled?: boolean;
+
   onClick?(e: MouseEvent<E>): void;
 
   onMouseUp?(e: MouseEvent<E>): void;
 
   onMouseDown?(e: MouseEvent<E>): void;
+}
+
+export interface KeyboardProps<E extends Element = Element> {
+  onKeyPress?(e: KeyboardEvent<E>): void;
+  onKeyDown?(e: KeyboardEvent<E>): void;
+  onKeyUp?(e: KeyboardEvent<E>): void;
 }
 
 /**

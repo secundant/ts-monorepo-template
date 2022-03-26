@@ -1,9 +1,10 @@
+import { HTMLElementProps } from '../../types';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, ReactNode } from 'react';
 
-export interface PaperProps {
+export interface PaperProps extends HTMLElementProps {
   className?: string;
-  children: NonNullable<ReactNode>;
+  children?: ReactNode;
   role?: string; // TODO Move to shared props
 }
 

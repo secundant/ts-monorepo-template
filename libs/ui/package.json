@@ -14,8 +14,7 @@
     "@fontsource/roboto": "^4.5.3",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.8",
-    "react": "^17.0.2",
-    "react-transition-group": "^4.4.2"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
@@ -34,7 +33,6 @@
     "@types/babel__core": "^7",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
-    "@types/react-transition-group": "^4",
     "@types/tailwindcss": "^3.0.9",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",

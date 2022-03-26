@@ -1,4 +1,4 @@
-import { RegularButton } from '../button';
+import { Button } from '../button';
 import { Spaced } from '../grid';
 import { Popover } from './popover';
 import { Meta } from '@storybook/react/types-6-0';
@@ -17,11 +17,11 @@ export const WithButton = () => {
       <Popover open={!!anchorEl} anchorNode={anchorEl} onClose={() => setAnchorEl(null)}>
         <div className="mb-2">Popover example</div>
         <Spaced>
-          <RegularButton>Action A</RegularButton>
-          <RegularButton>Action B</RegularButton>
+          <Button>Action A</Button>
+          <Button>Action B</Button>
         </Spaced>
       </Popover>
-      <RegularButton onClick={e => setAnchorEl(e.target as HTMLElement)}>Click me</RegularButton>
+      <Button onClick={e => setAnchorEl(e.target as HTMLElement)}>Click me</Button>
     </>
   );
 };

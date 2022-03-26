@@ -1,4 +1,13 @@
+export type UISize = 'sm' | 'md' | 'lg';
+
+/**
+ * Palette
+ */
+export type UIMainColorName = 'primary' | 'secondary' | 'error' | 'warning' | 'success';
+
 export interface UIPalette {
+  gray: UIGradientColor;
+
   white: string;
   black: string;
 

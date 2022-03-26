@@ -7,5 +7,5 @@ export interface DialogContentProps {
 }
 
 export function DialogContent({ children, className }: DialogContentProps) {
-  return <div className={clsx('p-4', className)}>{children}</div>;
+  return <div className={clsx('px-6 pb-6', className)}>{children}</div>;
 }

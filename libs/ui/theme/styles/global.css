@@ -19,4 +19,46 @@
   .input-box[aria-invalid="true"] {
     @apply border-red-800 outline-red-800;
   }
+
+  .focus-visible-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-main;
+  }
+
+  .button-base,
+  .button {
+    --button-color: currentColor;
+
+    @apply box-border overflow-hidden flex items-center justify-between;
+  }
+
+  .button {
+    @apply transition relative rounded-md px-4 py-2 box-border overflow-hidden;
+    @apply after:absolute after:inset-0 after:z-0 after:opacity-0 after:content-[""] after:transition-opacity after:bg-current;
+  }
+
+  .button:not([aria-disabled="true"]) {
+    @apply active:scale-95 hover:after:opacity-10 focus:after:opacity-25;
+  }
+
+  .button[aria-disabled="true"] {
+    @apply bg-gray-300 text-gray-600 cursor-wait;
+  }
+
+  .button-outlined,
+  .button-text {
+    color: var(--button-color);
+  }
+
+  .button-contained {
+    @apply text-white;
+    background-color: var(--button-color);
+  }
+
+  .button-outlined {
+    @apply border border-current;
+  }
+
+  .button-contained:not([aria-disabled="true"]) {
+    @apply shadow-el-sm hover:shadow-el-md active:shadow-el-lg active:scale-95;
+  }
 }

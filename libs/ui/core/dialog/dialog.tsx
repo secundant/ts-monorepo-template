@@ -1,6 +1,6 @@
 import { Paper } from '../card';
 import { Modal } from '../modal';
-import { Fade } from '../transition';
+import { Transition } from '../transition/transition';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
@@ -9,7 +9,7 @@ export interface DialogProps {
   onClose?(): void;
   className?: string;
   fullWidth?: boolean;
-  maxWidth?: 'md';
+  maxWidth?: 'sm' | 'md' | 'lg';
   children: NonNullable<ReactNode>;
 }
 
@@ -22,20 +22,26 @@ export function Dialog({
   fullWidth
 }: DialogProps) {
   return (
-    <Modal open={open} onClose={onClose} transition>
-      <Fade in={open} appear>
+    <Modal open={open} onClose={onClose} transition backdrop="blur">
+      <Transition type="Fade" open={open}>
         <Paper
           role="dialog"
           className={clsx(
-            'absolute-center max-h-[calc(100%-32px)] overflow-y-auto outline-none',
+            'absolute-center max-h-[calc(100%-32px)] overflow-y-auto outline-none px-0 py-0',
             fullWidth && 'w-[calc(100%-32px)]',
-            maxWidth && 'max-w-screen-lg',
+            maxWidth && maxWidthClass[maxWidth],
             className
           )}
         >
           {children}
         </Paper>
-      </Fade>
+      </Transition>
     </Modal>
   );
 }
+
+const maxWidthClass = {
+  sm: 'max-w-screen-sm',
+  md: 'max-w-screen-md',
+  lg: 'max-w-screen-lg'
+};

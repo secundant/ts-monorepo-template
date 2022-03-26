@@ -1,4 +1,4 @@
-import { RegularButton } from '../button';
+import { Button } from '../button';
 import { Spaced } from '../grid';
 import { DialogContent } from './content';
 import { Dialog, DialogProps } from './dialog';
@@ -14,8 +14,8 @@ export const WithButton: Story<DialogProps> = props => (
     <DialogContent>
       <div className="mb-2">Popover example</div>
       <Spaced>
-        <RegularButton>Action A</RegularButton>
-        <RegularButton>Action B</RegularButton>
+        <Button>Action A</Button>
+        <Button>Action B</Button>
       </Spaced>
     </DialogContent>
   </Dialog>

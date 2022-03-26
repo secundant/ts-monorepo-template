@@ -1,3 +1,4 @@
+import { Typography } from '../typography';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
@@ -7,5 +8,9 @@ export interface DialogHeaderProps {
 }
 
 export function DialogHeader({ children, className }: DialogHeaderProps) {
-  return <div className={clsx('bg-white', className)}>{children}</div>;
+  return (
+    <Typography type="h6" as="h2" className={clsx('px-6 py-4', className)}>
+      {children}
+    </Typography>
+  );
 }

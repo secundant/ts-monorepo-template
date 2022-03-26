@@ -1,4 +1,4 @@
-import { Button, RegularButton } from '@libs/ui/core/button';
+import { Button } from '@libs/ui/core/button';
 import { Spaced } from '@libs/ui/core/grid';
 import { Popover } from '@libs/ui/core/popover';
 import { AddIcon, KeyboardArrowLeftIcon } from '@libs/ui/icons';
@@ -13,9 +13,7 @@ export default function IndexPage() {
         <Popover open={!!anchorEl} anchorNode={anchorEl} onClose={() => setAnchorEl(null)}>
           Popover example
         </Popover>
-        <RegularButton onClick={e => setAnchorEl(e.target as HTMLElement)}>
-          Open popover
-        </RegularButton>
+        <Button onClick={e => setAnchorEl(e.target as HTMLElement)}>Open popover</Button>
         <Button>Hello</Button>
         <Button color="secondary">Hello</Button>
         <Button appearance="outlined">Hello</Button>

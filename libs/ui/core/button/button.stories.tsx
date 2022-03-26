@@ -1,11 +1,24 @@
-import { RegularButton, RegularButtonProps } from './regular-button';
+import { Spaced } from '../grid';
+import { Button, ButtonProps } from './button';
 
 export default {
   title: 'Components/Button'
 };
 
-export const Regular = (props: RegularButtonProps) => <RegularButton {...props} />;
+export const Appearance = (props: ButtonProps) => (
+  <Spaced>
+    <Button {...props} appearance="contained">
+      Contained
+    </Button>
+    <Button {...props} appearance="outlined">
+      Outlined
+    </Button>
+    <Button {...props} appearance="text">
+      Text
+    </Button>
+  </Spaced>
+);
 
-Regular.args = {
+Appearance.args = {
   children: 'Button'
 };

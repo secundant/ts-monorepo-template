@@ -1,2 +1,2 @@
-export { Fade } from './fade';
-export { Grow } from './grow';
+export { Transition } from './transition';
+export { useTransition } from './useTransition';

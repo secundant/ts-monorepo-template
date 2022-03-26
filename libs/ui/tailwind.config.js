@@ -35,6 +35,11 @@ module.exports = {
           main: withOpacityValue('secondary-main'),
           dark: 'var(--palette-secondary-dark)'
         }
+      },
+      spacing: {
+        'size-sm': '32px',
+        'size-md': '40px',
+        'size-lg': '48px'
       }
     }
   },

@@ -1,3 +1,3 @@
 export * from './common';
 export * from './elements';
-export * from './palette';
+export * from './theme';

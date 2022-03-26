@@ -1,13 +1,15 @@
 import { getOwnerWindow } from '../../lib/dom';
 import { Paper } from '../card';
 import { Modal } from '../modal';
-import { Grow } from '../transition';
+import { Transition } from '../transition';
 import { adjustPosition, getPopoverRectOffset, getTransformOriginStyleByRect } from './lib';
 import { PopoverElementPosition, PopoverOrigin, PopoverRect } from './types';
 import { debounce } from '@libs/utils/core';
+import clsx from 'clsx';
 import { ReactNode, useCallback, useEffect, useRef } from 'react';
 
 export interface PopoverProps {
+  id?: string;
   open?: boolean;
   children: NonNullable<ReactNode>;
   anchorNode?: HTMLElement | null;
@@ -19,6 +21,7 @@ export interface PopoverProps {
    */
   marginThreshold?: number;
 
+  className?: string;
   onClose?(): void;
 }
 
@@ -28,7 +31,9 @@ export function Popover({
   transformOrigin = defaultTransformOrigin,
   anchorOrigin = defaultAnchorOrigin,
   onClose,
+  id,
   open = false,
+  className,
   anchorNode
 }: PopoverProps) {
   const paperRef = useRef<HTMLDivElement>(null);
@@ -116,14 +121,19 @@ export function Popover({
 
   return (
     <Modal open={open} transition backdrop="invisible" onClose={onClose}>
-      <Grow appear in={open} onEntering={syncElementStyles}>
+      <Transition type="Grow" open={open} onEntering={syncElementStyles}>
         <Paper
-          className="overflow-x-hidden overflow-y-auto absolute outline-none min-w-[16px] min-h-[16px] max-w-[calc(100%-32px)] max-h-[calc(100%-32px)]"
+          id={id}
+          className={clsx(
+            'overflow-x-hidden shadow-el-lg overflow-y-auto absolute outline-none',
+            'min-w-[16px] min-h-[16px] max-w-[calc(100%-32px)] max-h-[calc(100%-32px)]',
+            className
+          )}
           ref={paperRef}
         >
           {children}
         </Paper>
-      </Grow>
+      </Transition>
     </Modal>
   );
 }

@@ -1,6 +1,6 @@
 import { useEventCallback, useForkRef, useMergedCallback } from '../../hooks';
 import { useFocusReturnToLast } from '../../hooks/focus-trap/useFocusReturnToLast';
-import { stopEvent } from '../../lib/dom';
+import { useHotkeyCallback } from '../../hooks/keyboard/useHotkey';
 import { Backdrop } from './backdrop';
 import { BrowserModalManager, ModalDescriptor, ModalManager } from './modal-manager';
 import { Portal } from './portal';
@@ -10,7 +10,6 @@ import {
   cloneElement,
   ForwardedRef,
   forwardRef,
-  KeyboardEvent,
   MouseEvent,
   ReactElement,
   useCallback,
@@ -24,7 +23,7 @@ export interface ModalProps {
   manager?: ModalManager<HTMLElement>;
   onClose?(): void;
   children: ReactElement;
-  backdrop?: boolean | 'invisible';
+  backdrop?: boolean | 'invisible' | 'blur';
   className?: string;
   transition?: boolean;
 }
@@ -77,12 +76,10 @@ export const Modal = forwardRef(
         handleMounted();
       }
     });
-    const handleKeyDown = useEventCallback((e: KeyboardEvent) => {
-      if (e.code === 'Escape' && open) {
-        stopEvent(e);
-        onClose?.();
-      }
-    });
+    const handleKeyDown = useHotkeyCallback(
+      [['Escape', () => open && onClose?.()]],
+      [open, onClose]
+    );
     const handleBackdropClick = useEventCallback((event: MouseEvent) => {
       if (event.target === event.currentTarget) {
         onClose?.();
@@ -125,6 +122,7 @@ export const Modal = forwardRef(
             <Backdrop
               open={open}
               onClick={handleBackdropClick}
+              blurred={backdrop === 'blur'}
               invisible={backdrop === 'invisible'}
             />
           )}

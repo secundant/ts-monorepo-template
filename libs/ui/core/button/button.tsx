@@ -1,46 +1,53 @@
+import { getColorVariable, mergeStyle } from '../../lib/theme';
+import { PropsOf, UIMainColorName, UISize } from '../../types';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-export interface ButtonProps {
+export interface ButtonProps extends PropsOf<'button'> {
   appearance?: ButtonAppearance;
   children: NonNullable<ReactNode>;
   disabled?: boolean;
-  size?: ButtonSize;
-  color?: 'primary' | 'secondary';
+  size?: UISize;
+  color?: UIMainColorName;
 }
 
 export type ButtonAppearance = 'contained' | 'outlined' | 'text';
-export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export function Button({
   children,
   appearance = 'contained',
   color = 'primary',
   disabled,
-  size = 'md'
+  size = 'md',
+  className,
+  style,
+  ...props
 }: ButtonProps) {
   return (
     <button
       className={clsx(
-        'relative rounded-md',
-        {
-          [`text-${color}-main bg-transparent`]: appearance === 'text' || appearance === 'outlined',
-          [`bg-${color}-main text-white`]: appearance === 'contained',
-          [`border border-${color}-main`]: appearance === 'outlined'
-        },
-        !disabled && {
-          transition: true,
-          [`hover:bg-${color}-dark`]: appearance === 'contained',
-          [`hover:bg-${color}-main/25`]: appearance === 'text' || appearance === 'outlined'
-        },
-        {
-          'px-2 py-1': size === 'sm',
-          'px-4 py-2': size === 'md',
-          'px-6 py-3': size === 'lg'
-        }
+        'button focus-visible-ring',
+        sizeClasses[size],
+        appearanceClasses[appearance],
+        className
       )}
+      style={mergeStyle(style, {
+        '--button-color': getColorVariable(`${color}-main`)
+      })}
+      {...props}
     >
       {children}
     </button>
   );
 }
+
+const sizeClasses = {
+  sm: 'h-8 px-3 text-sm',
+  md: 'h-10 px-4 text-base',
+  lg: 'h-12 px-6 text-lg'
+};
+const appearanceClasses = {
+  contained: 'button-contained',
+  outlined: 'button-outlined',
+  text: 'button-text'
+};

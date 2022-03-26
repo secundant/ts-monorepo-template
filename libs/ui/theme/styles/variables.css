@@ -10,6 +10,18 @@
   --palette-secondary-main: #27ae60;
   --palette-secondary-dark: #269a5b;
 
+  --palette-success-light: #5cc689;
+  --palette-success-main: #27ae60;
+  --palette-success-dark: #269a5b;
+
+  --palette-warning-light: #fcd34d;
+  --palette-warning-main: #f59e0b;
+  --palette-warning-dark: #b45309;
+
+  --palette-error-light: #eb5757;
+  --palette-error-main: #d20000;
+  --palette-error-dark: #a81414;
+
   /* Durations for Transition components */
   --transition-duration-entering-screen: 225ms;
   --transition-duration-leaving-screen: 195ms;
