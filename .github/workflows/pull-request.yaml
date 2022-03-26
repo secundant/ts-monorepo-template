@@ -23,7 +23,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - run: yarn install --immutable --immutable-cache
+      - run: yarn install --immutable
       - run: yarn lint
-      - run: yarn ts:check
-      - run: yarn test --passWithNoTests
+      - run: yarn jest

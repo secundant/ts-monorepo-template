@@ -24,5 +24,5 @@ tasks:
       - app:build
   check:
     cmds:
-      - yarn eslint {apps,libs}/**/*.{ts,tsx,js}
+      - yarn lint
       - yarn jest
