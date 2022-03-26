@@ -1,0 +1,17 @@
+/**
+Spaced
+ */
+
+.Spaced {
+  @apply flex items-center;
+  --spaced-size: 0;
+  --spaced-size-reversed: calc(var(--spaced-size) * -1);
+}
+
+.Spaced:not(:empty) {
+  margin: var(--spaced-size-reversed);
+}
+
+.Spaced > * {
+  margin: var(--spaced-size) !important;
+}

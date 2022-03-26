@@ -1,0 +1,29 @@
+import * as icons from '@libs/ui/icons'; import { IconsPreview } from './icons-preview';
+
+<Meta title="Components/Icons" />
+
+# Icons
+
+All icons was generated via svgr
+
+## Usage
+
+```jsx
+import { AddIcon } from '@libs/ui/icons';
+
+function MyComponent() {
+  return (
+    <>
+      <Input startIcon={<AddIcon />} />
+      <Alert>
+        <AddIcon fontSize="2em" color="white" />
+        <Typography>...</Typography>
+      </Alert>
+    </>
+  )
+}
+```
+
+<div className="flex flex-wrap w-full justify-center items-center">
+  <IconsPreview components={icons} />
+</div>

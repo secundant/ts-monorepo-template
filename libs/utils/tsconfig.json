@@ -1,0 +1,13 @@
+{
+  "extends": "@libs/config/ts/base.json",
+  "compilerOptions": {
+    "types": ["jest"],
+    "baseUrl": ".",
+    "rootDir": ".",
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

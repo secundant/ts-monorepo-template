@@ -1,0 +1,101 @@
+/**
+  Fade
+ */
+.Fade {
+  opacity: 0;
+  transition: opacity var(--transition-duration-entering-screen) var(--transition-easing-ease-in-out) 0ms;
+}
+
+.Fade[data-ui-transition-status="entering"],
+.Fade[data-ui-transition-status="entered"] {
+  opacity: 1;
+}
+
+.Fade[data-ui-transition-status="exiting"] {
+  transition: opacity var(--transition-duration-leaving-screen) var(--transition-easing-ease-in-out) 0ms;
+}
+
+/**
+  Grow
+ */
+
+.Grow {
+  --duration: calc(var(--transition-duration-entering-screen) * 1.75);
+
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+  transition:
+    opacity var(--duration) var(--transition-easing-ease-in-out) 0ms,
+    transform calc(var(--duration) * 0.666) var(--transition-easing-ease-in-out) 0ms;
+}
+
+.Grow[data-ui-transition-status="entering"] {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.Grow[data-ui-transition-status="entered"] {
+  opacity: 1;
+  transform: none;
+}
+
+.Grow[data-ui-transition-status="exiting"] {
+  --duration: calc(var(--transition-duration-leaving-screen) * 1.75);
+
+  transition:
+    opacity var(--duration) var(--transition-easing-ease-in-out) 0ms,
+    transform calc(var(--duration) * 0.666) var(--transition-easing-ease-in-out) calc(var(--duration) * 0.333);
+}
+
+/**
+  Collapse
+ */
+
+.Collapse {
+  --height: auto;
+  --height-exit: 0;
+
+  min-height: 0;
+  height: auto;
+  overflow: hidden;
+  transition: height var(--transition-duration-standard) var(--transition-easing-ease-in-out) 0ms;
+}
+
+.Collapse[data-ui-transition-status="entering"] {
+  height: var(--height);
+}
+
+.Collapse[data-ui-transition-status="entered"] {
+  overflow: visible;
+}
+
+.Collapse[data-ui-transition-status="entered"] {
+  height: auto;
+}
+
+.Collapse[data-ui-transition-status="exiting"] {
+  height: var(--height-exit);
+}
+
+.Collapse[data-ui-transition-status="exited"] {
+  height: var(--height-exit);
+  visibility: hidden;
+}
+
+.Collapse > .Wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.Collapse > .Wrapper > .Inner {
+  width: 100%;
+}
+
+/**
+  Shared
+ */
+
+.Fade[data-ui-transition-status="exited"],
+.Grow[data-ui-transition-status="exited"] {
+  visibility: hidden;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@apps/todo-web",
+  "version": "0.0.1",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "@libs/ui": "workspace:*",
+    "@libs/utils": "workspace:*",
+    "clsx": "^1.1.1",
+    "effector": "^22.2.0",
+    "effector-react": "^22.0.6",
+    "next": "^12.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@libs/config": "workspace:*",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cleanup": "yarn dlx rimraf .next",
+    "check:typescript": "tsc --noEmit"
+  }
+}

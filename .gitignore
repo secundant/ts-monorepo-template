@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+**/_ignore-*/
 
 coverage
 
@@ -10,12 +11,24 @@ tsconfig.tsbuildinfo
 
 **/node_modules/
 
-packages/**/dist
+apps/**/dist
+libs/**/dist
+shared/**/dist
+tools/**/dist
+
+# ========== Yarn ==========
 
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored but nested for e2e directories
 .yarn/*
-!.yarn/cache
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+# Uncommeth these lines if you're using Zero-Installs
+# !.yarn/cache
+
+# Uncommeth these lines if you're NOT using Zero-Installs
+.pnp.*
+
+# ========== Yarn ==========

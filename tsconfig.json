@@ -22,19 +22,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@my-project/*": ["packages/*"],
-      "@my-project/icons": ["packages/icons/index.ts"],
-      "@my-project/icons/*": ["packages/icons/*"],
-      "@my-project/client-web/*": ["packages/client-web/*"],
-      "@my-project/shared/*": ["packages/shared/*"],
-      "@my-project/uikit-web/*": ["packages/uikit-web/*"],
-      "@my-project/graphql/*": ["packages/graphql/*"],
-      "@my-project/service-auth/*": ["packages/service-auth/*"],
-      "@my-project/service-users/*": ["packages/service-users/*"],
-      "@my-project/service-shared/*": ["packages/service-shared/*"]
-    }
-  },
-  "include": ["./packages/**/*.ts", "./packages/**/*.tsx"]
+    "forceConsistentCasingInFileNames": true
+  }
 }

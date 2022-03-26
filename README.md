@@ -7,7 +7,16 @@ Monorepo template for fullstack projects
 1. Install [Yarn](https://yarnpkg.com/getting-started/install)
    and update it to latest version (probably, optional) - `yarn set version latest`
 2. (`optional`) Run `yarn install` for building platform-specific dependencies
-2. Run any package command ex. `yarn workspace @my-project/client-web dev`
+3. Run any package command ex. `yarn workspace @my-project/client-web dev`
+
+## Tools
+
+- [Taskfile](https://taskfile.dev/#/) - Task manager
+- [Hygen](https://www.hygen.io/) - Code generation tool
+
+## Scripts
+
+See
 
 ## Tech/framework used
 
@@ -28,7 +37,7 @@ Monorepo template for fullstack projects
 
 Other test types not supported yet.
 
-### Package manager - [Yarn v2](https://yarnpkg.com)
+### Package manager - [Yarn v3](https://yarnpkg.com)
 
 - [Plug'n'Play](https://yarnpkg.com/features/pnp) feature - no more node_modules
 - [Workspaces](https://yarnpkg.com/features/workspaces) for great code organization
@@ -45,7 +54,7 @@ Other test types not supported yet.
 
 ## Packages
 
-### [client-web](./packages/client-web)
+### [client-web](apps/client-web)
 
 React + NextJS application for web platform.
 Features included:
@@ -54,19 +63,19 @@ Features included:
 - styled-components + material-ui integration
 - Bundle analyzing
 
-### [uikit-web](./packages/uikit-web)
+### [uikit-web](apps/uikit-web)
 
 UIKit for web platform based on material-ui and styled-components
 
-### [shared](./packages/shared)
+### [shared](apps/shared)
 
 Package for shared utils/hooks/models/etc.
 
-### [icons](./packages/icons)
+### [icons](apps/icons)
 
 Example of react icons library with raw *.svg files as sources
 and compiling them to react components by svgr
 
-### [graphql](./packages/graphql)
+### [graphql](apps/graphql)
 
 GraphQL API gateway based on NestJS

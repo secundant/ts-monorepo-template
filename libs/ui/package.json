@@ -1,0 +1,43 @@
+{
+  "name": "@libs/ui",
+  "version": "0.0.1",
+  "packageManager": "yarn@3.0.0",
+  "scripts": {
+    "cleanup": "yarn dlx rimraf icons node_modules/.cache",
+    "storybook": "start-storybook -p 6006",
+    "build": "yarn cleanup && yarn build:icons",
+    "build:icons": "svgr --out-dir icons --ignore-existing -- static/icons",
+    "build:storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.5.7",
+    "clsx": "^1.1.1",
+    "dayjs": "^1.11.0",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@libs/config": "*",
+    "@libs/utils": "*",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@svgr/cli": "^6.2.1",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.43",
+    "@types/tailwindcss": "^3.0.9",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
+  }
+}

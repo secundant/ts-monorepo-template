@@ -1,8 +1,9 @@
-node_modules
+node_modules/**/*
+**/_ignore-*/**/*
 *.local.{js,ts,tsx}
 dist/**/*
 es6/**/*
 es2015/**/*
 esnext/**/*
 .eslintcache
-.pnp.js
+.pnp.сjs

@@ -1,10 +1,10 @@
 .idea
 .DS_Store
 
-packages/client-web/.next/
+apps/client-web/.next/
 node_modules/
 
-packages/**/dist
+apps/**/dist
 .github
 
 .yarn/*
