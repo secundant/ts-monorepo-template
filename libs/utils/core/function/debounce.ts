@@ -13,7 +13,7 @@ export function debounce<This, Args extends any[]>(
   fn: (this: This, ...args: Args) => any,
   wait = 166
 ): Debounced<This, Args> {
-  let timeout: number;
+  let timeout: ReturnType<typeof setTimeout>;
 
   function debounced(this: This, ...args: Args) {
     debounced.clear();

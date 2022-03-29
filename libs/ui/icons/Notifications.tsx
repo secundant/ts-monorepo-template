@@ -1,5 +1,4 @@
-import createSvgIcon from '@libs/ui/core/svg-icon/create';
-
+import { createSvgIcon } from '@libs/ui/core/svg-icon';
 export default createSvgIcon(
   'SvgNotifications',
   '0 0 30 30',

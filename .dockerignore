@@ -1,11 +1,15 @@
-.idea
-.DS_Store
+# ENV
 
-apps/client-web/.next/
-node_modules/
+**/.env.local
+**/.env.*.local
 
-apps/**/dist
-.github
+# node_modules and dist folders
+
+apps/**/.next
+node_modules
+**/node_modules
+
+# Yarn
 
 .yarn/*
 !.yarn/cache
@@ -13,3 +17,26 @@ apps/**/dist
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+# Cache
+
+.cache/*
+tsconfig.tsbuildinfo
+.eslintcache
+
+# GIT
+
+.git
+.gitignore
+.gitattributes
+.github
+
+# IDE
+
+.idea
+.DS_Store
+
+# Logs
+
+logs
+*.log
