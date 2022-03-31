@@ -14,4 +14,8 @@ declare module 'react' {
   ): T & {
     displayName?: string | undefined;
   };
+
+  interface CSSProperties extends React.CSSProperties {
+    [key: `--${string}`]: string | number | null | void;
+  }
 }

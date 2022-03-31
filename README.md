@@ -23,13 +23,11 @@ See
 ### FrontEnd
 
 - [NextJS](https://nextjs.org/)
-- [Material UI](https://material-ui.com/)
-- [styled-components](https://styled-components.com/)
+- [Tailwind](https://tailwindcss.com/)
 
 ### BackEnd
 
-- [NestJS](https://nestjs.com/)
-- [GraphQL](https://graphql.org/) by `@nestjs/graphql`
+- `TODO` [NestJS](https://nestjs.com/)
 
 ### Tests
 
@@ -39,7 +37,6 @@ Other test types not supported yet.
 
 ### Package manager - [Yarn v3](https://yarnpkg.com)
 
-- [Plug'n'Play](https://yarnpkg.com/features/pnp) feature - no more node_modules
 - [Workspaces](https://yarnpkg.com/features/workspaces) for great code organization
 
 ### Code style
@@ -51,31 +48,3 @@ Other test types not supported yet.
 
 - [Husky](https://github.com/typicode/husky) for custom local git hooks
 - [lint-staged](https://github.com/okonet/lint-staged) for advanced pre-commit hook configuration
-
-## Packages
-
-### [client-web](apps/client-web)
-
-React + NextJS application for web platform.
-Features included:
-
-- Resolving mobile/desktop theme at server side
-- styled-components + material-ui integration
-- Bundle analyzing
-
-### [uikit-web](apps/uikit-web)
-
-UIKit for web platform based on material-ui and styled-components
-
-### [shared](apps/shared)
-
-Package for shared utils/hooks/models/etc.
-
-### [icons](apps/icons)
-
-Example of react icons library with raw *.svg files as sources
-and compiling them to react components by svgr
-
-### [graphql](apps/graphql)
-
-GraphQL API gateway based on NestJS
