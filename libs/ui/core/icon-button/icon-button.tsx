@@ -1,11 +1,9 @@
-import { getColorVariable, mergeStyle } from '../../lib/theme';
-import { HTMLElementProps, TouchableElementProps, UIMainColorName, UISize } from '../../types';
+import { getColorVariable } from '../../lib/theme';
+import { PropsOf, UIMainColorName, UISize } from '../../types';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-export interface IconButtonProps
-  extends HTMLElementProps,
-    TouchableElementProps<HTMLButtonElement> {
+export interface IconButtonProps extends PropsOf<'button'> {
   children: NonNullable<ReactNode>;
   color?: UIMainColorName;
   size?: UISize;
@@ -28,7 +26,8 @@ export function IconButton({
         sizeClasses[size],
         className
       )}
-      style={mergeStyle(
+      style={Object.assign(
+        {},
         style,
         color && {
           color: getColorVariable(`${color}-main`)

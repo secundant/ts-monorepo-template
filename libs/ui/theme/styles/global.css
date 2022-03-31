@@ -8,8 +8,13 @@
     transform: translate(-50%, -50%);
   }
 
+  .ring,
+  .focus-visible-ring:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary-main;
+  }
+
   .input-box {
-    @apply transition border border-gray-300 rounded-md outline-none outline-offset-0;
+    @apply transition border border-gray-300 rounded-md outline-none outline-offset-0 overflow-hidden;
   }
 
   .input-box:not([aria-disabled="true"]) {
@@ -18,10 +23,6 @@
 
   .input-box[aria-invalid="true"] {
     @apply border-red-800 outline-red-800;
-  }
-
-  .focus-visible-ring {
-    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-main;
   }
 
   .button-base,

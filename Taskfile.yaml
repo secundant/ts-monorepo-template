@@ -22,6 +22,11 @@ tasks:
     deps:
       - ui:build
       - app:build
+
+  cleanup:
+    cmds:
+      - yarn dlx rimraf apps/**/.next/ **/node_modules/.cache/
+
   check:
     cmds:
       - yarn lint

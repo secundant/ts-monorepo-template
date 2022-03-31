@@ -1,17 +1,15 @@
 import { getOwnerWindow } from '../../lib/dom';
-import { Paper } from '../card';
+import { Paper, PaperProps } from '../card';
 import { Modal } from '../modal';
 import { Transition } from '../transition';
 import { adjustPosition, getPopoverRectOffset, getTransformOriginStyleByRect } from './lib';
 import { PopoverElementPosition, PopoverOrigin, PopoverRect } from './types';
 import { debounce } from '@libs/utils/core';
 import clsx from 'clsx';
-import { ReactNode, useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
-export interface PopoverProps {
-  id?: string;
+export interface PopoverProps extends PaperProps {
   open?: boolean;
-  children: NonNullable<ReactNode>;
   anchorNode?: HTMLElement | null;
   anchorOrigin?: PopoverOrigin;
   transformOrigin?: PopoverOrigin;
@@ -34,7 +32,8 @@ export function Popover({
   id,
   open = false,
   className,
-  anchorNode
+  anchorNode,
+  ...props
 }: PopoverProps) {
   const paperRef = useRef<HTMLDivElement>(null);
 
@@ -130,6 +129,7 @@ export function Popover({
             className
           )}
           ref={paperRef}
+          {...props}
         >
           {children}
         </Paper>

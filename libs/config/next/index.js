@@ -19,14 +19,17 @@ module.exports = {
     bool: createEnvFn(p => p === 'true', { defaultFallback: false })
   },
   createNextConfig(
-    { cwd, workspaceDependencies = [], enableBundleAnalyzer, logSettings },
-    configuration
+    { cwd, workspaceDependencies = [], analyzer: { enabled, detailed } = {}, logSettings },
+    configuration = {}
   ) {
     log.info(
       'Next application settings:\n',
       JSON.stringify(
         {
-          enableBundleAnalyzer,
+          analyzer: {
+            enabled,
+            detailed
+          },
           workspaceDependencies,
           ...logSettings
         },
@@ -37,11 +40,29 @@ module.exports = {
     return withPlugins(
       [
         withBundleAnalyzer({
-          enabled: enableBundleAnalyzer
+          enabled
         }),
         withTranspileModules(workspaceDependencies)
       ],
-      configuration
+      {
+        swcMinify: false,
+        reactStrictMode: true,
+        ...configuration,
+        experimental: {
+          externalHelpers: true,
+          esmExternals: true,
+          externalDir: false,
+          ...(configuration.experimental ?? {})
+        },
+        webpack(config, options) {
+          if (enabled && detailed) {
+            config.optimization.concatenateModules = false;
+            config.optimization.moduleIds = 'named';
+            config.optimization.chunkIds = 'named';
+          }
+          return configuration.webpack ? configuration.webpack(config, options) : config;
+        }
+      }
     );
   }
 };

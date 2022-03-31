@@ -1,4 +1,4 @@
-import { getColorVariable, mergeStyle } from '../../lib/theme';
+import { getColorVariable } from '../../lib/theme';
 import { PropsOf, UIMainColorName, UISize } from '../../types';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
@@ -31,9 +31,10 @@ export function Button({
         appearanceClasses[appearance],
         className
       )}
-      style={mergeStyle(style, {
+      style={{
+        ...style,
         '--button-color': getColorVariable(`${color}-main`)
-      })}
+      }}
       {...props}
     >
       {children}
